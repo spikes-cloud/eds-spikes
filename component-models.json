@@ -118,6 +118,33 @@
     ]
   },
   {
+    "id": "assetselector",
+    "fields": [
+      {
+        "component": "custom-asset-namespace:custom-asset",
+        "name": "image",
+        "label": "Select an Asset",
+        "description": "Asset Selector from Adobe UE",
+        "placeholder": "placeholder",
+        "configUrl": "/content/dam/image.config.json",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "imageTitle",
+        "label": "Enter Alt Text",
+        "valueType": "string"
+      },
+      {
+        "component": "boolean",
+        "name": "imageLoading",
+        "label": "Enable Lazy Loading",
+        "valueType": "boolean",
+        "value": true
+      }
+    ]
+  },
+  {
     "id": "card",
     "fields": [
       {
