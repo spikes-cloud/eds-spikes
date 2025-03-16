@@ -1,0 +1,31 @@
+{
+    "repoNames": ["delivery-p146463-e1510253.adobeaemcloud.com","author-p146463-e1510253.adobeaemcloud.com"],
+     "aemTierType":["delivery","author"],
+     "apiKey": "aemcs-qantas-assetselector",
+    "filterSchema": [
+      {
+        "fields": [
+          {
+            "element": "checkbox",
+            "name": "type",
+            "defaultValue": ["image/*", "video/*"],
+            "options": [
+              {
+                "label": "Image",
+                "value": "image/*",
+                "readOnly": true
+              },
+              {
+                "label": "Video",
+                "value": "video/*",
+                "readOnly": true
+              }
+            ],
+            "orientation": "horizontal"
+          }
+        ],
+        "header": "File Type",
+        "groupKey": "FileTypeGroup"
+      }
+    ]
+  }
