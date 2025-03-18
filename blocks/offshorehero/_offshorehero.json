@@ -1,110 +1,49 @@
 {
-    "definitions": [
-      {
-        "title": "OffshoreHero",
-        "id": "offshorehero",
-        "plugins": {
-          "xwalk": {
-            "page": {
-              "resourceType": "core/franklin/components/block/v1/block",
-              "template": {
-                "name": "OffshoreHero",
-                "model": "offshorehero"
-              }
+  "definitions": [
+    {
+      "title": "OffshoreHero",
+      "id": "offshorehero",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "OffshoreHero",
+              "model": "offshorehero"
             }
           }
         }
       }
-    ],
-    "models": [
-      {
-        "id": "offshorehero",
-        "tabs": [
-          {
-            "name": "Asset",
-            "fields": [
-              {
-                "component": "reference",
-                "valueType": "string",
-                "name": "image",
-                "label": "Image",
-                "multi": false
-              },
-              {
-                "component": "text",
-                "valueType": "string",
-                "name": "imageAlt",
-                "label": "Alternative text for image",
-                "value": ""
-              },
-              {
-                "component": "checkbox",
-                "name": "noAltText",
-                "label": "Don't provide alternative text",
-                "value": false
-              },
-              {
-                "component": "text",
-                "valueType": "string",
-                "name": "imageLocation",
-                "label": "Image Location/Caption",
-                "value": ""
-              },
-              {
-                "component": "checkbox",
-                "name": "hideImageMobile",
-                "label": "Hide image in mobile",
-                "value": false
-              }
-            ]
-          },
-          {
-            "name": "Text",
-            "fields": [
-              {
-                "component": "text",
-                "valueType": "string",
-                "name": "title",
-                "label": "Title",
-                "value": ""
-              },
-              {
-                "component": "richtext",
-                "valueType": "string",
-                "name": "introText",
-                "label": "Intro Text",
-                "value": ""
-              }
-            ]
-          },
-          {
-            "name": "Logo",
-            "fields": [
-               {
-                "component": "reference",
-                "valueType": "string",
-                "name": "logoImage",
-                "label": "Logo Image",
-                "multi": false
-              },
-              {
-                "component": "text",
-                "valueType": "string",
-                "name": "logoAlt",
-                "label": "Logo Alt",
-                "value": ""
-              },
-              {
-                "component": "checkbox",
-                "name": "noLogoAltText",
-                "label": "Don't provide alternative text",
-                "value": false
-              }
-
-            ]
-          }
-        ]
-      }
-    ],
-    "filters": []
-  }
+    }
+  ],
+  "models": [
+    {
+      "id": "offshorehero",
+      "fields": [
+        {
+          "component": "tab",
+          "label": "Tab 1",
+          "name": "tab1"
+        },
+        {
+          "component": "text-input",
+          "label": "Text 1",
+          "name": "text1",
+          "valueType": "string"
+        },
+        {
+          "component": "tab",
+          "label": "Tab 2",
+          "name": "tab2"
+        },
+        {
+          "component": "text-input",
+          "label": "Text 2",
+          "name": "text2",
+          "valueType": "string"
+        }
+      ]
+    }
+  ],
+  "filters": []
+}
