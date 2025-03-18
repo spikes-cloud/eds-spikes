@@ -220,11 +220,9 @@
   },
   {
     "id": "offshorehero",
-    "fields": [
+    "tabs": [
       {
-        "component": "group",
-        "name": "assetTab",
-        "label": "Asset",
+        "name": "Asset",
         "fields": [
           {
             "component": "reference",
@@ -262,9 +260,7 @@
         ]
       },
       {
-        "component": "group",
-        "name": "textTab",
-        "label": "Text",
+        "name": "Text",
         "fields": [
           {
             "component": "text",
@@ -283,9 +279,7 @@
         ]
       },
       {
-        "component": "group",
-        "name": "logoTab",
-        "label": "Logo",
+        "name": "Logo",
         "fields": [
           {
             "component": "reference",
@@ -294,20 +288,6 @@
             "label": "Logo Image",
             "multi": false
           },
-          {
-            "component": "reference",
-            "valueType": "string",
-            "name": "logoPicker",
-            "label": "Logo Picker",
-            "multi": false
-          }
-        ]
-      },
-      {
-        "component": "group",
-        "name": "altLogoTab",
-        "label": "Alternative text for logo",
-        "fields": [
           {
             "component": "text",
             "valueType": "string",
