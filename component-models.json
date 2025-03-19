@@ -215,23 +215,11 @@
         "value": ""
       },
       {
-        "component": "checkbox",
-        "name": "noAltText",
-        "label": "Don't provide alternative text",
-        "value": false
-      },
-      {
         "component": "text",
         "valueType": "string",
         "name": "imageLocation",
         "label": "Image Location/Caption",
         "value": ""
-      },
-      {
-        "component": "checkbox",
-        "name": "hideImageMobile",
-        "label": "Hide image in mobile",
-        "value": false
       },
       {
         "component": "tab",
@@ -270,12 +258,6 @@
         "name": "logoAlt",
         "label": "Logo Alt",
         "value": ""
-      },
-      {
-        "component": "checkbox",
-        "name": "noLogoAltText",
-        "label": "Don't provide alternative text",
-        "value": false
       }
     ]
   }
