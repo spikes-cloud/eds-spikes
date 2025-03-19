@@ -302,6 +302,20 @@
         "name": "noLogoAltText",
         "label": "Don't provide alternative text",
         "value": false
+      },
+      {
+        "component": "custom-multifield",
+        "valueType": "string",
+        "name": "custommultifield",
+        "label": "Multi Field Text",
+        "value": ""
+      },
+      {
+        "component": "custom-field",
+        "name": "customfield",
+        "value": "",
+        "label": "Custom Field",
+        "valueType": "string"
       }
     ]
   }
