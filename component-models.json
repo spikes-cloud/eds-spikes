@@ -241,10 +241,10 @@
         "value": ""
       },
       {
-        "component": "checkbox",
-        "name": "noAltText",
+        "component": "boolean",
         "label": "Don't provide alternative text",
-        "value": false
+        "name": "noAltText",
+        "valueType": "boolean"
       },
       {
         "component": "text",
@@ -254,10 +254,10 @@
         "value": ""
       },
       {
-        "component": "checkbox",
-        "name": "hideImageMobile",
+        "component": "boolean",
         "label": "Hide image in mobile",
-        "value": false
+        "name": "hideImageMobile",
+        "valueType": "boolean"
       },
       {
         "component": "tab",
@@ -298,10 +298,10 @@
         "value": ""
       },
       {
-        "component": "checkbox",
-        "name": "noLogoAltText",
+        "component": "boolean",
         "label": "Don't provide alternative text",
-        "value": false
+        "name": "noLogoAltText",
+        "valueType": "boolean"
       }
     ]
   }
