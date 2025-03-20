@@ -301,7 +301,7 @@
         "value": ""
       },
       {
-        "component": "boolean",
+        "component": "checkbox",
         "label": "Don't provide alternative text",
         "name": "noLogoAltText",
         "valueType": "boolean"
