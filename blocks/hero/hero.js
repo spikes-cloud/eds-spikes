@@ -1,10 +1,10 @@
 export default function decorate(block) {
   const container = document.createElement('div');
+  container.className = 'container';
   let heroImage = null;
   let heroTitle = null;
   let heroCaption = null;
   let introText = null;
-  container.className = 'container';
   const children = [...block.children];
 
   children.forEach((child, index) => {
