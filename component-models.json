@@ -212,14 +212,7 @@
         "valueType": "string",
         "name": "imageAlt",
         "label": "Alternative text for image",
-        "value": "",
-        "required": true
-      },
-      {
-        "component": "boolean",
-        "label": "Don't provide alternative text",
-        "name": "noAltText",
-        "valueType": "boolean"
+        "value": ""
       },
       {
         "component": "text",
@@ -227,12 +220,6 @@
         "name": "imageLocation",
         "label": "Image Location/Caption",
         "value": ""
-      },
-      {
-        "component": "boolean",
-        "label": "Hide image in mobile",
-        "name": "hideImageMobile",
-        "valueType": "boolean"
       },
       {
         "component": "tab",
@@ -244,8 +231,7 @@
         "valueType": "string",
         "name": "title",
         "label": "Title",
-        "value": "",
-        "required": true
+        "value": ""
       },
       {
         "component": "richtext",
@@ -271,21 +257,7 @@
         "valueType": "string",
         "name": "logoAlt",
         "label": "Logo Alt",
-        "condition": {
-          "===": [
-            {
-              "var": "noLogoAltText"
-            },
-            false
-          ]
-        },
         "value": ""
-      },
-      {
-        "component": "boolean",
-        "label": "Don't provide alternative text",
-        "name": "noLogoAltText",
-        "valueType": "boolean"
       }
     ]
   }
