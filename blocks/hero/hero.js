@@ -1,40 +1,23 @@
+import optimizeImages from '../../scripts/utils/optimize-images.js'; // Adjust the path as needed
+import promoteChild from '../../scripts/utils/dom.js';
+
 export default function decorate(block) {
-  const container = document.createElement('div');
-  container.className = 'container';
-  let heroImage = null;
-  let heroTitle = null;
-  let heroCaption = null;
-  let introText = null;
-  const children = [...block.children];
+  const [image, caption, title, text] = [...block.children];
+  const heroBody = document.createElement('div');
+  const heroImage = promoteChild(image);
+  const heroCaption = promoteChild(caption);
+  const heroTitle = promoteChild(title);
+  const introText = promoteChild(text);
 
-  children.forEach((child, index) => {
-    const innerDiv = child.querySelector('div');
-    if (!innerDiv) return;
-    const content = innerDiv.innerHTML.trim();
+  heroImage?.classList.add('hero-image');
+  heroCaption?.classList.add('hero-caption');
+  heroTitle?.classList.add('hero-title');
+  introText?.classList.add('hero-intro-text');
 
-    if (innerDiv.querySelector('picture')) {
-      heroImage = document.createElement('div');
-      heroImage.className = 'hero-image';
-      heroImage.innerHTML = innerDiv.innerHTML;
-    } else if (index === 1) {
-      heroCaption = document.createElement('div');
-      heroCaption.className = 'hero-caption';
-      heroCaption.innerHTML = content;
-    } else if (index === 2) {
-      heroTitle = document.createElement('div');
-      heroTitle.className = 'hero-title';
-      heroTitle.innerHTML = content;
-    } else if (index === 3) {
-      introText = document.createElement('div');
-      introText.className = 'hero-intro-text';
-      introText.innerHTML = content;
-    }
-  });
-
+  heroBody.classList.add('hero-body');
+  heroBody.append(heroTitle, heroImage, heroCaption, introText);
   block.textContent = '';
-  container.append(heroTitle);
-  container.append(heroImage);
-  container.append(heroCaption);
-  container.append(introText);
-  block.append(container);
+  block.append(heroBody);
+
+  optimizeImages(block);
 }
