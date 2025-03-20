@@ -238,7 +238,8 @@
         "valueType": "string",
         "name": "imageAlt",
         "label": "Alternative text for image",
-        "value": ""
+        "value": "",
+        "required": true
       },
       {
         "component": "boolean",
@@ -269,7 +270,8 @@
         "valueType": "string",
         "name": "title",
         "label": "Title",
-        "value": ""
+        "value": "",
+        "required": true
       },
       {
         "component": "richtext",
