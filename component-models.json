@@ -297,6 +297,7 @@
         "valueType": "string",
         "name": "logoAlt",
         "label": "Logo Alt",
+        "condition": { "===": [{ "var": "noLogoAltText" }, false] },
         "value": ""
       },
       {
