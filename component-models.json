@@ -260,5 +260,142 @@
         "value": ""
       }
     ]
+  },
+  {
+    "id": "heroblock",
+    "fields": [
+      {
+        "component": "tab",
+        "label": "Asset",
+        "name": "asset"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Alternative text for image",
+        "description": "Write descriptive, concise, relevant alt text to describe the image in context, enhancing accessibility forvisually impaired users and improving SEO.",
+        "value": "",
+        "required": true
+      },
+      {
+        "component": "boolean",
+        "label": "Don't provide alternative text",
+        "name": "imageAltHide",
+        "valueType": "boolean",
+        "description": "Leave alt text empty for images that add no meaning or value. Marking them as decorative ensures assistive technologies ignore them."
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageCaption",
+        "label": "Image Location/Caption",
+        "description": "If required for image location, credits and image disclaimer.",
+        "value": ""
+      },
+      {
+        "component": "boolean",
+        "label": "Hide image in mobile",
+        "name": "imageHideInMobile",
+        "valueType": "boolean"
+      },
+      {
+        "component": "tab",
+        "label": "Text",
+        "name": "text"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title",
+        "value": "",
+        "required": true
+      },
+      {
+        "component": "select",
+        "name": "titleStyle",
+        "value": "",
+        "label": "Title Style",
+        "description": "Default to H1 if not selected",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "H1",
+            "value": "h1"
+          },
+          {
+            "name": "H2",
+            "value": "h2"
+          },
+          {
+            "name": "H3",
+            "value": "h3"
+          },
+          {
+            "name": "H4",
+            "value": "h4"
+          },
+          {
+            "name": "H5",
+            "value": "h5"
+          },
+          {
+            "name": "H6",
+            "value": "h6"
+          }
+        ]
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "introText",
+        "label": "Intro Text",
+        "description": "Maximum 3 lines of intro copy (desktop).",
+        "value": ""
+      },
+      {
+        "component": "tab",
+        "label": "Logo",
+        "name": "logo"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "logoPicker",
+        "label": "Logo Picker",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "logoAlt",
+        "description": "Write descriptive, concise, relevant alt text to describe the image in context, enhancing accessibility for visually impaired users and improving SEO.",
+        "label": "Alternative text for logo",
+        "condition": {
+          "===": [
+            {
+              "var": "logoAltHide"
+            },
+            false
+          ]
+        },
+        "value": ""
+      },
+      {
+        "component": "boolean",
+        "label": "Don't provide alternative text",
+        "name": "logoAltHide",
+        "description": "Leave alt text empty for images that add no meaning or value. Marking them as decorative ensures assistive technologies ignore them.",
+        "valueType": "boolean"
+      }
+    ]
   }
 ]
