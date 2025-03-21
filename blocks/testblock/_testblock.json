@@ -37,6 +37,7 @@
           "valueType": "string",
           "name": "imageAlt",
           "label": "Alternative text for image",
+          "description": "Write descriptive, concise, relevant alt text to describe the image in context, enhancing accessibility forvisually impaired users and improving SEO.",
           "value": "",
           "required": true
         },
@@ -44,13 +45,15 @@
           "component": "boolean",
           "label": "Don't provide alternative text",
           "name": "imageAltHide",
-          "valueType": "boolean"
+          "valueType": "boolean",
+          "description": "Leave alt text empty for images that add no meaning or value. Marking them as decorative ensures assistive technologies ignore them."
         },
         {
           "component": "text",
           "valueType": "string",
           "name": "imageCaption",
           "label": "Image Location/Caption",
+          "description": "If required for image location, credits and image disclaimer.",
           "value": ""
         },
         {
@@ -111,6 +114,7 @@
           "valueType": "string",
           "name": "introText",
           "label": "Intro Text",
+          "description": "Maximum 3 lines of intro copy (desktop).",
           "value": ""
         },
         {
@@ -129,6 +133,7 @@
           "component": "text",
           "valueType": "string",
           "name": "logoAlt",
+          "description": "Write descriptive, concise, relevant alt text to describe the image in context, enhancing accessibility for visually impaired users and improving SEO.",
           "label": "Alternative text for logo",
           "condition": { "===": [{ "var": "logoAltHide" }, false] },
           "value": ""
@@ -137,6 +142,7 @@
           "component": "boolean",
           "label": "Don't provide alternative text",
           "name": "logoAltHide",
+          "description": "Leave alt text empty for images that add no meaning or value. Marking them as decorative ensures assistive technologies ignore them.",
           "valueType": "boolean"
         }
       ]
