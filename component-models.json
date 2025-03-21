@@ -244,20 +244,20 @@
       {
         "component": "boolean",
         "label": "Don't provide alternative text",
-        "name": "noAltText",
+        "name": "imageAltHide",
         "valueType": "boolean"
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "imageLocation",
+        "name": "imageCaption",
         "label": "Image Location/Caption",
         "value": ""
       },
       {
         "component": "boolean",
         "label": "Hide image in mobile",
-        "name": "hideImageMobile",
+        "name": "imageHideInMobile",
         "valueType": "boolean"
       },
       {
@@ -274,6 +274,40 @@
         "required": true
       },
       {
+        "component": "select",
+        "name": "titleStyle",
+        "value": "",
+        "label": "Title Style",
+        "description": "Default to H1 if not selected",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "H1",
+            "value": "h1"
+          },
+          {
+            "name": "H2",
+            "value": "h2"
+          },
+          {
+            "name": "H3",
+            "value": "h3"
+          },
+          {
+            "name": "H4",
+            "value": "h4"
+          },
+          {
+            "name": "H5",
+            "value": "h5"
+          },
+          {
+            "name": "H6",
+            "value": "h6"
+          }
+        ]
+      },
+      {
         "component": "richtext",
         "valueType": "string",
         "name": "introText",
@@ -288,19 +322,19 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "logoImage",
-        "label": "Logo Image",
+        "name": "logoPicker",
+        "label": "Logo Picker",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
         "name": "logoAlt",
-        "label": "Logo Alt",
+        "label": "Alternative text for logo",
         "condition": {
           "===": [
             {
-              "var": "noLogoAltText"
+              "var": "logoAltHide"
             },
             false
           ]
@@ -310,7 +344,7 @@
       {
         "component": "boolean",
         "label": "Don't provide alternative text",
-        "name": "noLogoAltText",
+        "name": "logoAltHide",
         "valueType": "boolean"
       }
     ]
