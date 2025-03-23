@@ -1,7 +1,7 @@
 {
   "definitions": [
     {
-      "title": "Dynamic Media Image Renderer",
+      "title": "Image (Dynamic Media)",
       "id": "assetselector",
       "plugins": {
         "xwalk": {
