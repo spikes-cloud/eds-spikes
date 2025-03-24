@@ -214,6 +214,14 @@
         "valueType": "string",
         "name": "imagePickerAlt",
         "label": "Alternative text for image",
+        "condition": {
+          "===": [
+            {
+              "var": "imagePickerAltHide"
+            },
+            true
+          ]
+        },
         "description": "Write descriptive, concise, relevant alt text to describe the image in context, enhancing accessibility forvisually impaired users and improving SEO.",
         "value": ""
       },
@@ -321,17 +329,10 @@
         "value": ""
       },
       {
-        "component": "checkbox-group",
-        "label": "",
+        "component": "boolean",
+        "label": "Don't provide alternative text",
         "name": "logoAltHide",
-        "description": "Leave alt text empty for images that add no meaning or value. Marking them as decorative ensures assistive technologies ignore them.",
-        "valueType": "boolean",
-        "options": [
-          {
-            "name": "Alternative text for logo",
-            "value": true
-          }
-        ]
+        "valueType": "boolean"
       },
       {
         "component": "select",
