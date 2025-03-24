@@ -2,22 +2,23 @@ import optimizeImages from '../../scripts/utils/optimize-images.js'; // Adjust t
 import promoteChild from '../../scripts/utils/dom.js';
 
 export default function decorate(block) {
-  const [image, caption, title, text] = [...block.children];
-  const heroBody = document.createElement('div');
-  const heroImage = promoteChild(image);
-  const heroCaption = promoteChild(caption);
-  const heroTitle = promoteChild(title);
-  const introText = promoteChild(text);
+  const [img, imgAlt, caption, hideOnMobile, title, heading, text, logo] = [...block.children];
+  const heroBlockBody = document.createElement('div');
+  const heroBlockImage = promoteChild(img);
+  const heroBlockCaption = promoteChild(caption);
+  const heroBlockTitle = promoteChild(title);
+  const heroBlockIntroText = promoteChild(text);
 
-  heroImage?.classList.add('hero-image');
-  heroCaption?.classList.add('hero-caption');
-  heroTitle?.classList.add('hero-title');
-  introText?.classList.add('hero-intro-text');
+  heroBlockImage?.classList.add('hero-block-image');
+  heroBlockCaption?.classList.add('hero-block-caption');
+  heroBlockTitle?.classList.add('hero-block-title');
+  heroBlockIntroText?.classList.add('hero-block-intro-text');
 
-  heroBody.classList.add('hero-body');
-  heroBody.append(heroTitle, heroImage, heroCaption, introText);
+  heroBlockBody.classList.add('hero-block-body');
+  heroBlockBody.append(heroBlockTitle, heroBlockImage, heroBlockCaption, heroBlockIntroText);
   block.textContent = '';
-  block.append(heroBody);
+  block.append(heroBlockBody);
 
   optimizeImages(block);
+  console.log(imgAlt, hideOnMobile, heading, logo);
 }
