@@ -326,7 +326,6 @@
         "name": "logoAltHide",
         "description": "Leave alt text empty for images that add no meaning or value. Marking them as decorative ensures assistive technologies ignore them.",
         "valueType": "boolean",
-        "value": false,
         "options": [
           {
             "name": "Alternative text for logo",
