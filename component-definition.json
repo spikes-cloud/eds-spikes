@@ -83,7 +83,7 @@
       "id": "blocks",
       "components": [
         {
-          "title": "Asset Selector",
+          "title": "Image (Dynamic Media)",
           "id": "assetselector",
           "plugins": {
             "xwalk": {
