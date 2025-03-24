@@ -3,31 +3,39 @@
   padding: 0;
 }
 
-.hero {
+.hero-block-image {
+  height: 400px;
+  overflow: hidden;
+}
+
+.hero-block-title {
+  font-size: 42px;
+  margin-bottom: 30px;
+}
+
+.hero-block-caption {
+  width: 85%;
+  background: #fff;
+  padding: 30px;
+  border-top-right-radius: 20px;
+  margin-top: -60px;
   position: relative;
-  padding: 40px 24px;
-  min-height: 300px;
+  font-size: 22px;
 }
 
-.hero h1 {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--background-color);
+.hero-block-caption p,
+.hero-block-intro-text p {
+  margin: 0
 }
 
-.hero picture {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  object-fit: cover;
-  box-sizing: border-box;
+.hero-block-intro-text {
+  font-size: 16px;
+  width: 85%;
 }
 
-.hero img {
-  object-fit: cover;
+.hero-block-image img {
   width: 100%;
-  height: 100%;
+  border-top-right-radius: 50px;
 }
 
 @media (width >= 900px) {
