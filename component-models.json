@@ -354,6 +354,18 @@
             "value": "hide-img"
           }
         ]
+      },
+      {
+        "component": "checkbox-group",
+        "label": "",
+        "name": "checkbox",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Hide image in mobile view",
+            "value": "hideImageMobile"
+          }
+        ]
       }
     ]
   }
