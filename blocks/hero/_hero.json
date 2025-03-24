@@ -135,7 +135,7 @@
           "name": "logoAlt",
           "description": "Write descriptive, concise, relevant alt text to describe the image in context, enhancing accessibility for visually impaired users and improving SEO.",
           "label": "Alternative text for logo",
-          "condition": { "===": [{ "var": "logoAltHide" }, false] },
+          "condition": { "===": [{ "var": "logoAltHide" }, true] },
           "value": ""
         },
         {
@@ -144,6 +144,7 @@
           "name": "logoAltHide",
           "description": "Leave alt text empty for images that add no meaning or value. Marking them as decorative ensures assistive technologies ignore them.",
           "valueType": "boolean",
+          "value": false,
           "options": [{ "name": "Alternative text for logo", "value": true }]
         },
         {
