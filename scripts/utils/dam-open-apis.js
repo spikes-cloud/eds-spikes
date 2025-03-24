@@ -1,4 +1,4 @@
-import { stringFormat } from './common-utils.js';
+import { stringFormat, sortObjectByAttr } from './common-utils.js';
 
 /**
  * @param {string} damUrlStr - The base DAM Open API URL.
@@ -32,17 +32,27 @@ const createPicTagWithOpenApi = async (damUrl) => {
   const params = new URLSearchParams(window.location.search);
 
   // Step 1 - Fetch Metadata
-  const metadataMap = await getAssetMetadata(damUrl?.href, params.toString());
+  if (typeof globalThis.globalDmSmartCrops == 'undefined') {
+    globalThis.globalDmSmartCrops = await getAssetMetadata(
+      damUrl?.href,
+      params.toString(),
+    );
+  }
 
   // Step 2 - Extract metadata details
-  const { repositoryMetadata, assetMetadata } = metadataMap;
+  const { repositoryMetadata, assetMetadata } = globalDmSmartCrops;
   const dcFormat = repositoryMetadata?.['dc:format'] || 'image/webp';
   const title = assetMetadata?.['dc:title'] || '';
   const seoname = `${title?.replace(/[^A-Z0-9]+/gi, '-')}-${dcFormat.replace('/', '.')}`;
 
   // Step 3 -  Add source tag & srcset attr
   if (repositoryMetadata?.smartcrops) {
-    Object.entries(repositoryMetadata.smartcrops).forEach(([crop, value]) => {
+    const sortedSmartCrops = sortObjectByAttr(
+      repositoryMetadata?.smartcrops,
+      'width',
+      'desc',
+    );
+    Object.entries(sortedSmartCrops).forEach(([crop, value]) => {
       const smartCropUrl = stringFormat(OPEN_API_FORMAT, { seoname, crop });
       const sourceEle = document.createElement('source');
       sourceEle.setAttribute(
