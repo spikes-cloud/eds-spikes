@@ -22,10 +22,10 @@
       "fields": [
         {
           "component": "checkbox",
-          "valueType": "boolean",
+          "valueType": "string",
           "name": "newfield",
           "label": "Checkbox",
-          "value": true
+          "value": ""
         },
         {
           "component": "custom-field",
