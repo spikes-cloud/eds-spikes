@@ -219,7 +219,7 @@
             {
               "var": "imagePickerAltHide"
             },
-            true
+            false
           ]
         },
         "description": "Write descriptive, concise, relevant alt text to describe the image in context, enhancing accessibility forvisually impaired users and improving SEO.",
@@ -323,7 +323,7 @@
             {
               "var": "logoAltHide"
             },
-            true
+            false
           ]
         },
         "value": ""

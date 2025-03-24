@@ -39,7 +39,7 @@
           "valueType": "string",
           "name": "imagePickerAlt",
           "label": "Alternative text for image",
-          "condition": { "===": [{ "var": "imagePickerAltHide" }, true] },
+          "condition": { "===": [{ "var": "imagePickerAltHide" }, false] },
           "description": "Write descriptive, concise, relevant alt text to describe the image in context, enhancing accessibility forvisually impaired users and improving SEO.",
           "value": ""
         },
@@ -136,7 +136,7 @@
           "name": "logoAlt",
           "description": "Write descriptive, concise, relevant alt text to describe the image in context, enhancing accessibility for visually impaired users and improving SEO.",
           "label": "Alternative text for logo",
-          "condition": { "===": [{ "var": "logoAltHide" }, true] },
+          "condition": { "===": [{ "var": "logoAltHide" }, false] },
           "value": ""
         },
         {
