@@ -222,17 +222,36 @@
     "id": "icon",
     "fields": [
       {
-        "component": "checkbox",
-        "valueType": "string",
-        "name": "newfield",
-        "label": "Checkbox",
-        "value": ""
-      },
-      {
         "component": "custom-field",
         "name": "customfield",
         "value": "",
         "label": "Custom Field",
+        "valueType": "string"
+      },
+      {
+        "component": "checkbox-group",
+        "label": "Checkbox",
+        "name": "checkbox",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Disable Alt Text",
+            "value": "hideAlt"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "text",
+        "label": "Simple Text",
+        "condition": {
+          "===": [
+            {
+              "var": "checkbox"
+            },
+            false
+          ]
+        },
         "valueType": "string"
       }
     ]
