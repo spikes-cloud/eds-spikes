@@ -2,9 +2,9 @@ import optimizeImages from '../../scripts/utils/optimize-images.js'; // Adjust t
 import promoteChild from '../../scripts/utils/dom.js';
 
 export default function decorate(block) {
-  const [image, caption, title, text] = [...block.children];
+  const [img, imgAlt, caption, hideOnMobile, title, heading, text, logo] = [...block.children];
   const heroBlockBody = document.createElement('div');
-  const heroBlockImage = promoteChild(image);
+  const heroBlockImage = promoteChild(img);
   const heroBlockCaption = promoteChild(caption);
   const heroBlockTitle = promoteChild(title);
   const heroBlockIntroText = promoteChild(text);
@@ -20,4 +20,5 @@ export default function decorate(block) {
   block.append(heroBlockBody);
 
   optimizeImages(block);
+  console.log(imgAlt, hideOnMobile, heading, logo);
 }
