@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { stringFormat, sortObjectByAttr } from './common-utils.js';
 
 /**
@@ -32,7 +33,7 @@ const createPicTagWithOpenApi = async (damUrl) => {
   const params = new URLSearchParams(window.location.search);
 
   // Step 1 - Fetch Metadata
-  if (typeof globalThis.globalDmSmartCrops == 'undefined') {
+  if (typeof globalThis.globalDmSmartCrops === 'undefined') {
     globalThis.globalDmSmartCrops = await getAssetMetadata(
       damUrl?.href,
       params.toString(),
@@ -42,8 +43,7 @@ const createPicTagWithOpenApi = async (damUrl) => {
   // Step 2 - Extract metadata details
   const { repositoryMetadata, assetMetadata } = globalDmSmartCrops;
   const dcFormat = repositoryMetadata?.['dc:format'] || 'image/webp';
-  const title = assetMetadata?.['dc:title'] || '';
-  const seoname = `${title?.replace(/[^A-Z0-9]+/gi, '-')}-${dcFormat.replace('/', '.')}`;
+  const seoname = assetMetadata?.['repo:name'] || `-${dcFormat.replace('/', '.')}`;
 
   // Step 3 -  Add source tag & srcset attr
   if (repositoryMetadata?.smartcrops) {
@@ -73,7 +73,7 @@ const createPicTagWithOpenApi = async (damUrl) => {
   const imgAtts = {
     loading: damUrl?.loading || 'lazy', // For better performance
     src: damUrl.href,
-    alt: damUrl?.alt || title || 'Default Image', // Add Image Title incase the alt text is missing.
+    alt: damUrl?.alt || 'Default Image', // Add Image Title incase the alt text is missing.
     width: assetMetadata?.['tiff:ImageWidth'] || 'auto',
     height: assetMetadata?.['tiff:ImageLength'] || 'auto',
   };
@@ -86,4 +86,33 @@ const createPicTagWithOpenApi = async (damUrl) => {
   return pictureEle;
 };
 
-export { createPicTagWithOpenApi, getAssetMetadata };
+const createPicAndImgWithOpenApi = async (damUrl) => {
+  // Step 0 - Create Picture Tag
+  const pictureEle = document.createElement('picture');
+  const params = new URLSearchParams(window.location.search);
+
+  // Step 1 - Fetch Metadata
+  if (typeof globalThis.globalDmSmartCrops === 'undefined') {
+    globalThis.globalDmSmartCrops = await getAssetMetadata(
+      damUrl?.href,
+      params.toString(),
+    );
+  }
+  // Step 2 - Add <img> Tag
+  const { assetMetadata } = globalDmSmartCrops;
+  const imgAtts = {
+    loading: damUrl?.loading || 'lazy', // For better performance
+    src: damUrl.href,
+    alt: damUrl?.alt || 'Default Image', // Add Image Title incase the alt text is missing.
+    width: assetMetadata?.['tiff:ImageWidth'] || 'auto',
+    height: assetMetadata?.['tiff:ImageLength'] || 'auto',
+  };
+  const imgEle = document.createElement('img');
+  Object.entries(imgAtts).forEach(([attr, value]) => {
+    if (value) imgEle.setAttribute(attr, value);
+  });
+
+  pictureEle.appendChild(imgEle);
+  return pictureEle;
+};
+export { createPicTagWithOpenApi, getAssetMetadata, createPicAndImgWithOpenApi };
