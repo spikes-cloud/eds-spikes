@@ -124,11 +124,13 @@
           "name": "logo"
         },
         {
-          "component": "reference",
-          "valueType": "string",
+          "component": "custom-asset-namespace:custom-asset",
           "name": "logoPicker",
           "label": "Logo Picker",
-          "multi": false
+          "description": "Logo Selector from Adobe UE",
+          "placeholder": "placeholder",
+          "configUrl": "/content/dam/image.config.json",
+          "valueType": "string"
         },
         {
           "component": "text",

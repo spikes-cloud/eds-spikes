@@ -2,23 +2,46 @@ import optimizeImages from '../../scripts/utils/optimize-images.js'; // Adjust t
 import promoteChild from '../../scripts/utils/dom.js';
 
 export default function decorate(block) {
-  const [img, imgAlt, caption, hideOnMobile, title, heading, text, logo] = [...block.children];
-  const heroBlockBody = document.createElement('div');
-  const heroBlockImage = promoteChild(img);
-  const heroBlockCaption = promoteChild(caption);
-  const heroBlockTitle = promoteChild(title);
-  const heroBlockIntroText = promoteChild(text);
+  const [img, imgAlt, caption, hideOnMobile, title, heading, text, logo] = [
+    ...block.children,
+  ];
 
-  heroBlockImage?.classList.add('hero-block-image');
-  heroBlockCaption?.classList.add('hero-block-caption');
-  heroBlockTitle?.classList.add('hero-block-title');
-  heroBlockIntroText?.classList.add('hero-block-intro-text');
+  const heroBody = document.createElement('div');
 
-  heroBlockBody.classList.add('hero-block-body');
-  heroBlockBody.append(heroBlockTitle, heroBlockImage, heroBlockCaption, heroBlockIntroText);
+  const image = img ? promoteChild(img) : null;
+  const captionText = caption ? promoteChild(caption) : null;
+  const titleText = title ? promoteChild(title) : null;
+  const introText = text ? promoteChild(text) : null;
+  const isAltTextRequired = imgAlt ? promoteChild(imgAlt) : null;
+  const hideImageOnMobile = hideOnMobile ? promoteChild(hideOnMobile) : null;
+  const headingText = heading ? promoteChild(heading) : null;
+  const logoImage = logo ? promoteChild(logo) : null;
+
+  // Add CSS classes only if the elements exist
+  image?.classList.add('image');
+  captionText?.classList.add('caption');
+  titleText?.classList.add('title');
+  introText?.classList.add('intro-text');
+  headingText?.classList.add('heading');
+  logoImage?.classList.add('logo-image');
+
+  heroBody.classList.add('body');
+
+  // Append only the elements that exist
+  const elementsToAppend = [
+    titleText,
+    headingText,
+    image,
+    isAltTextRequired,
+    captionText,
+    introText,
+    hideImageOnMobile,
+    logoImage,
+  ].filter((el) => el !== null); // Remove `null` values
+
+  heroBody.append(...elementsToAppend); // Append only existing elements
+
   block.textContent = '';
-  block.append(heroBlockBody);
-
+  block.append(heroBody);
   optimizeImages(block);
-  console.log(imgAlt, hideOnMobile, heading, logo);
 }
