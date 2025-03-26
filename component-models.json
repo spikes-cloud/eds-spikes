@@ -222,6 +222,13 @@
     "id": "icon",
     "fields": [
       {
+        "component": "icon-picker",
+        "name": "icon",
+        "value": "",
+        "label": "Icon",
+        "valueType": "string"
+      },
+      {
         "component": "custom-field",
         "name": "customfield",
         "value": "",
@@ -230,7 +237,7 @@
       },
       {
         "component": "checkbox-group",
-        "label": "Checkbox",
+        "label": "",
         "name": "checkbox",
         "valueType": "string",
         "options": [
@@ -249,7 +256,7 @@
             {
               "var": "checkbox"
             },
-            false
+            "hideAlt"
           ]
         },
         "valueType": "string"
