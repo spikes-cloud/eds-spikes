@@ -63,7 +63,7 @@
         {
           "component": "checkbox-group",
           "label": "",
-          "name": "checkbox",
+          "name": "classes",
           "valueType": "string",
           "options": [{ "name": "Hide image in mobile view", "value": "hideImageMobile" }]
         },
