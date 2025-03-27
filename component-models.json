@@ -315,6 +315,24 @@
         "label": "Don't provide alternative text",
         "name": "logoAltHide",
         "valueType": "boolean"
+      },
+      {
+        "component": "select",
+        "name": "classes",
+        "value": "",
+        "label": "Teaser options",
+        "description": "",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Side-by-side",
+            "value": "side-by-side"
+          }
+        ]
       }
     ]
   }
