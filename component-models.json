@@ -236,6 +236,20 @@
         "valueType": "string"
       },
       {
+        "component": "text",
+        "valueType": "string",
+        "name": "heading",
+        "value": "",
+        "label": "heading"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "headingType",
+        "value": "",
+        "label": "headingType"
+      },
+      {
         "component": "checkbox-group",
         "label": "",
         "name": "checkbox",
