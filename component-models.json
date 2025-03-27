@@ -260,17 +260,16 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "title",
+        "name": "heading",
         "label": "Title",
         "value": ""
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "titleType",
+        "name": "headingType",
         "label": "Type",
-        "value": "h1",
-        "hidden": true
+        "value": "h1"
       },
       {
         "component": "richtext",
