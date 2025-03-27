@@ -10,7 +10,7 @@
             "template": {
               "name": "Icon",
               "model": "icon",
-              "heading": "Hel",
+              "heading": "",
               "headingType": "h1"
             }
           }
@@ -48,7 +48,8 @@
           "valueType": "string",
           "name": "headingType",
           "value": "h1",
-          "label": "headingType"
+          "label": "headingType",
+          "hidden": true
         },
         {
           "component": "checkbox-group",

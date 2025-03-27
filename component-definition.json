@@ -182,7 +182,7 @@
                 "template": {
                   "name": "Icon",
                   "model": "icon",
-                  "heading": "Hel",
+                  "heading": "",
                   "headingType": "h1"
                 }
               }
