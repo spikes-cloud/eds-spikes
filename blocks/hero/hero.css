@@ -3,17 +3,17 @@
   padding: 0;
 }
 
-.hero-block-image {
+.hero .image {
   height: 400px;
   overflow: hidden;
 }
 
-.hero-block-title {
+.hero .title {
   font-size: 42px;
   margin-bottom: 30px;
 }
 
-.hero-block-caption {
+.hero .caption {
   width: 85%;
   background: #fff;
   padding: 30px;
@@ -23,17 +23,17 @@
   font-size: 22px;
 }
 
-.hero-block-caption p,
-.hero-block-intro-text p {
+.hero .caption p,
+.hero .intro-text p {
   margin: 0
 }
 
-.hero-block-intro-text {
+.hero .intro-text {
   font-size: 16px;
   width: 85%;
 }
 
-.hero-block-image img {
+.hero .image img {
   width: 100%;
   border-top-right-radius: 50px;
 }
