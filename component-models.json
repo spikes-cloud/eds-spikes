@@ -243,14 +243,6 @@
         "label": "heading"
       },
       {
-        "component": "text",
-        "valueType": "string",
-        "name": "headingType",
-        "value": "h1",
-        "label": "headingType",
-        "hidden": true
-      },
-      {
         "component": "checkbox-group",
         "label": "",
         "name": "checkbox",
