@@ -245,7 +245,6 @@
         "label": "",
         "name": "classes",
         "valueType": "string",
-        "value": "",
         "options": [
           {
             "name": "Hide image in mobile view",
