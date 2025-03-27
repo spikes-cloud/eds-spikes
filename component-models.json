@@ -267,8 +267,8 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "titleStyle",
-        "label": "Style",
+        "name": "titleType",
+        "label": "Type",
         "value": "h1",
         "hidden": true
       },
