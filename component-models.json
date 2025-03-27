@@ -269,7 +269,8 @@
         "valueType": "string",
         "name": "headingType",
         "label": "Type",
-        "value": "h1"
+        "value": "h1",
+        "hidden": true
       },
       {
         "component": "richtext",
