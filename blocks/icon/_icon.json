@@ -46,7 +46,8 @@
           "valueType": "string",
           "name": "headingType",
           "value": "",
-          "label": "headingType"
+          "label": "headingType",
+          "hidden": true
         },
         {
           "component": "checkbox-group",
