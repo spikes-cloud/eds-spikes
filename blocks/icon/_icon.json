@@ -9,7 +9,8 @@
             "resourceType": "core/franklin/components/block/v1/block",
             "template": {
               "name": "Icon",
-              "model": "icon"
+              "model": "icon",
+              "titleType": "h1"
             }
           }
         }
@@ -37,17 +38,9 @@
         {
           "component": "text",
           "valueType": "string",
-          "name": "heading",
+          "name": "title",
           "value": "",
           "label": "heading"
-        },
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "headingType",
-          "value": "",
-          "label": "headingType",
-          "hidden": true
         },
         {
           "component": "checkbox-group",

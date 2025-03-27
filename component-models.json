@@ -238,17 +238,9 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "heading",
+        "name": "title",
         "value": "",
         "label": "heading"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "headingType",
-        "value": "",
-        "label": "headingType",
-        "hidden": true
       },
       {
         "component": "checkbox-group",
