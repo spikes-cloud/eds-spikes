@@ -238,7 +238,7 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "title",
+        "name": "heading",
         "value": "",
         "label": "heading"
       },
