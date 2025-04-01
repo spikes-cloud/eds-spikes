@@ -28,6 +28,34 @@
           "value": "",
           "label": "Icon",
           "valueType": "string"
+        },
+        {
+          "component": "custom-field",
+          "name": "customfield",
+          "value": "",
+          "label": "Custom Field",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "heading",
+          "value": "",
+          "label": "heading"
+        },
+        {
+          "component": "checkbox-group",
+          "label": "",
+          "name": "checkbox",
+          "valueType": "string",
+          "options": [{ "name": "Disable Alt Text", "value": "hideAlt" }]
+        },
+        {
+          "component": "text",
+          "name": "text",
+          "label": "Simple Text",
+          "condition": { "===": [{ "var": "checkbox" }, "hideAlt"] },
+          "valueType": "string"
         }
       ]
     }
