@@ -28,13 +28,11 @@
           "name": "asset"
         },
         {
-          "component": "custom-asset-namespace:custom-asset",
+          "component": "reference",
+          "valueType": "string",
           "name": "imagePicker",
           "label": "Select an Asset",
-          "description": "Asset Selector from Adobe UE",
-          "placeholder": "placeholder",
-          "configUrl": "/content/dam/image.config.json",
-          "valueType": "string"
+          "multi": false
         },
         {
           "component": "text",
@@ -102,13 +100,11 @@
           "name": "logo"
         },
         {
-          "component": "custom-asset-namespace:custom-asset",
+          "component": "reference",
+          "valueType": "string",
           "name": "logoPicker",
           "label": "Logo Picker",
-          "description": "Logo Selector from Adobe UE",
-          "placeholder": "placeholder",
-          "configUrl": "/content/dam/image.config.json",
-          "valueType": "string"
+          "multi": false
         },
         {
           "component": "text",
