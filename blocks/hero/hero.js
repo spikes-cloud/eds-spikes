@@ -20,21 +20,13 @@ export default async function decorate(block) {
   // const pictureEle = await createPicTagWithOpenApi(damUrl);
 
   const heroBody = document.createElement('div');
-
   const titleText = heroTitle ? promoteChild(heroTitle) : null;
-
   const checkImgAltText = checkImgAlt ? promoteChild(checkImgAlt) : null;
-
   const mainImage = heroImage ? promoteChild(heroImage) : null;
-
   const captionText = imgCaption ? promoteChild(imgCaption) : null;
-
   const logoImage = logoImg ? promoteChild(logoImg) : null;
-
   const checklogoAltText = checklogoAlt ? promoteChild(checklogoAlt) : null;
-
   const introTextValue = introText ? promoteChild(introText) : null;
-
   console.log(checkImgAltText, checklogoAltText);
 
   // Add CSS classes only if the elements exist
@@ -48,10 +40,10 @@ export default async function decorate(block) {
   // Append only the elements that exist
   const elementsToAppend = [
     titleText,
-    captionText,
-    introText,
     mainImage,
+    captionText,
     logoImage,
+    introTextValue,
   ].filter((el) => el !== null); // Remove `null` values
 
   heroBody.append(...elementsToAppend); // Append only existing elements
