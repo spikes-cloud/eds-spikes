@@ -1,48 +1,3 @@
-/* .hero-container .hero-wrapper {
-  max-width: unset;
-  padding: 0;
-}
-
-.hero .image {
-  height: 400px;
-  overflow: hidden;
-}
-
-.hero .title {
-  font-size: 42px;
-  margin-bottom: 30px;
-}
-
-.hero .caption {
-  width: 85%;
-  background: #fff;
-  padding: 30px;
-  border-top-right-radius: 20px;
-  margin-top: -60px;
-  position: relative;
-  font-size: 22px;
-}
-
-.hero .caption p,
-.hero .intro-text p {
-  margin: 0
-}
-
-.hero .intro-text {
-  font-size: 16px;
-  width: 85%;
-}
-
-.hero .image img {
-  width: 100%;
-  border-top-right-radius: 50px;
-}
-
-@media (width >= 900px) {
-  .hero {
-    padding: 40px 32px;
-  }
-} */
 .hero {
   padding: 96px 0;
 }
@@ -64,18 +19,18 @@
 }
 
 .hero .image picture {
-    position: absolute;
-    z-index: -1;
-    inset: 0;
-    object-fit: cover;
-    box-sizing: border-box;
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  object-fit: cover;
+  box-sizing: border-box;
 }
 
 .hero .image img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    border-top-right-radius: 168px;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 168px;
 }
 
 .hero .caption {
@@ -99,7 +54,7 @@
   max-width: 100%;
 }
 
-.hero .introText {
+.hero .intro-text {
   color: #323232;
   font-size: 32px;
   line-height: 45px;

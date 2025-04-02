@@ -63,7 +63,9 @@
           "label": "",
           "name": "classes",
           "valueType": "string",
-          "options": [{ "name": "Hide image in mobile view", "value": "hideImageMobile" }]
+          "options": [
+            { "name": "Hide image in mobile view", "value": "hide-image-mobile" }
+          ]
         },
         {
           "component": "tab",
