@@ -246,7 +246,7 @@
         "options": [
           {
             "name": "Hide image in mobile view",
-            "value": "hideImageMobile"
+            "value": "hide-image-mobile"
           }
         ]
       },
