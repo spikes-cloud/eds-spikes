@@ -184,7 +184,7 @@ p {
   .hero .hero-content {
     margin-top: -160px;
     gap: 32px;
-    padding: 32px 96px 0 32px;
+    padding: 32px 96px 0 96px;
 
     /* margin-right: 96px; */
     border-top-right-radius: 96px;
@@ -278,7 +278,7 @@ p {
     /* margin-right: 16px; */
     border-top-right-radius: 40px;
     min-height: 80px;
-    
+
     /* max-width: 664px; */
   }
 
