@@ -55,12 +55,18 @@ p {
   background: #fff;
   z-index: 1;
   position: relative;
-  width: 95%;
-  box-sizing: border-box;
+  margin-right: 224px;
 }
 
 .hero .image img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero .logo {
+  max-width: 200px;
+  max-height: 88px;
 }
 
 @media (width >= 2561px) {
@@ -74,12 +80,7 @@ p {
 }
 
 @media (width >= 1920px)  {
-  .hero .title h1 {
-    font-size: 72px;
-    line-height: 88px;
-  }
-
-  .hero .title {
+ .hero .title {
     margin: 0 224px 48px;
   }
 
@@ -95,33 +96,15 @@ p {
     margin-top: -240px;
     gap: 48px;
     padding: 48px 168px 0 224px;
-
-    /* margin-right: 224px; */
-    border-top-right-radius: 120px;
-
-    /* max-width: 848px; */
+    border-top-right-radius: 168px;
     min-height: 240px;
   }
 
-  .hero .intro-text {
-    font-size: 32px;
-    line-height: 45px;
-  }
-
-  .hero .logo {
-    max-width: 200px;
-    max-height: 88px;
-  }
 }
 
   @media (1280px <= width <= 1919px) {
   .hero {
     margin: 64px 0;
-  }
-
-  .hero .title h1 {
-    font-size: 72px;
-    line-height: 88px;
   }
 
   .hero .title {
@@ -140,33 +123,16 @@ p {
     margin-top: -200px;
     gap: 40px;
     padding: 40px 120px 0 160px;
-
-    /* margin-right: 160px; */
     border-top-right-radius: 120px;
     min-height: 200px;
-
-    /* max-width: 848px; */
+    margin-right: 160px;
   }
 
-  .hero .intro-text {
-    font-size: 32px;
-    line-height: 45px;
-  }
-
-  .hero .logo {
-    max-width: 200px;
-    max-height: 88px;
-  }
 }
 
 @media (1024px <= width <= 1279px) {
   .hero {
     margin: 56px 0;
-  }
-
-  .hero .title h1 {
-    font-size: 72px;
-    line-height: 88px;
   }
 
   .hero .title {
@@ -185,23 +151,11 @@ p {
     margin-top: -160px;
     gap: 32px;
     padding: 32px 96px 0;
-
-    /* margin-right: 96px; */
     border-top-right-radius: 96px;
     min-height: 160px;
-
-    /* max-width: 848px; */
+    margin-right: 96px;
   }
 
-  .hero .intro-text {
-    font-size: 32px;
-    line-height: 45px;
-  }
-
-  .hero .logo {
-    max-width: 200px;
-    max-height: 88px;
-  }
 }
 
 @media (576px <= width <= 1023px) {
@@ -231,8 +185,6 @@ p {
     gap: 24px;
     padding: 24px 72px 0 32px;
     border-top-right-radius: 72px;
-
-    /* max-width: 848px; */
     margin-right: 32px;
     min-height: 120px;
   }
@@ -274,12 +226,9 @@ p {
     margin-top: -80px;
     gap: 16px;
     padding: 16px 40px 0 16px;
-
-    /* margin-right: 16px; */
     border-top-right-radius: 40px;
     min-height: 80px;
-
-    /* max-width: 664px; */
+    margin-right: 16px;
   }
 
   .hero .intro-text {
