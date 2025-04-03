@@ -1,45 +1,282 @@
-.hero-container .hero-wrapper {
-  max-width: unset;
+.hero {
+  margin: 96px 0;
+}
+
+main > .section > div.hero-wrapper {
+  max-width: 100%;
   padding: 0;
 }
 
-.hero-block-image {
-  height: 400px;
+main > .section.hero-container {
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.hero .title h1 {
+  color: #323232;
+  font-size: 72px;
+  font-weight: 300;
+  line-height: 88px;
+  padding: 0;
+  font-family: unset;
+}
+
+.hero .caption, .hero .caption p {
+  color: #666564;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.hero .logo img {
+  max-width: 100%;
+}
+
+.hero .intro-text, .hero .intro-text p {
+  color: #323232;
+  font-size: 32px;
+  line-height: 45px;
+  font-weight: 300;
+}
+
+.hero .image {
   overflow: hidden;
 }
 
-.hero-block-title {
-  font-size: 42px;
-  margin-bottom: 30px;
+.hero .hero-max-content {
+  display: flex;
+  flex-direction: column;
 }
 
-.hero-block-caption {
-  width: 85%;
+.hero .hero-content {
   background: #fff;
-  padding: 30px;
-  border-top-right-radius: 20px;
-  margin-top: -60px;
+  z-index: 1;
   position: relative;
-  font-size: 22px;
+  margin-right: 224px;
 }
 
-.hero-block-caption p,
-.hero-block-intro-text p {
-  margin: 0
-}
-
-.hero-block-intro-text {
-  font-size: 16px;
-  width: 85%;
-}
-
-.hero-block-image img {
+.hero .image img {
   width: 100%;
-  border-top-right-radius: 50px;
+  height: 100%;
+  object-fit: cover;
 }
 
-@media (width >= 900px) {
+.hero .logo {
+  max-width: 200px;
+  max-height: 88px;
+
+}
+
+.hero-max-content {
+    max-width: 848px;
+}
+
+@media (width >= 2561px) {
+  .hero .image img {
+    border-top-left-radius: 120px;
+  }
+
+  main > .section > div.hero-wrapper {
+    max-width: 2560px;
+  }
+}
+
+@media (width >= 1920px)  {
+ .hero .title {
+    margin: 0 224px 48px;
+  }
+
+  .hero .image img {
+    border-top-right-radius: 168px;
+  }
+
+  .hero .image {
+    height: 960px;
+  }
+
+  .hero .hero-max-content {
+     gap: 48px;
+  }
+
+  .hero .hero-content {
+    margin-top: -240px;
+    padding: 48px 168px 0 224px;
+    border-top-right-radius: 168px;
+    min-height: 240px;
+  }
+
+}
+
+  @media (1280px <= width <= 1919px) {
   .hero {
-    padding: 40px 32px;
+    margin: 64px 0;
+  }
+
+  .hero .title {
+    margin: 0 160px 40px;
+  }
+
+  .hero .image img {
+    border-top-right-radius: 120px;
+  }
+
+  .hero .image {
+    height: 760px;
+  }
+
+  .hero .hero-max-content {
+     gap: 40px;
+  }
+
+  .hero .hero-content {
+    margin-top: -200px;
+    padding: 40px 120px 0 160px;
+    border-top-right-radius: 120px;
+    min-height: 200px;
+    margin-right: 160px;
+  }
+
+}
+
+@media (1024px <= width <= 1279px) {
+  .hero {
+    margin: 56px 0;
+  }
+
+  .hero .title {
+    margin: 0 96px 32px;
+  }
+
+  .hero .image img {
+    border-top-right-radius: 96px;
+  }
+
+  .hero .image {
+    height: 560px;
+  }
+
+  .hero .hero-max-content {
+     gap: 32px;
+   }
+
+  .hero .hero-content {
+    margin-top: -160px;
+    padding: 32px 96px 0;
+    border-top-right-radius: 96px;
+    min-height: 160px;
+    margin-right: 96px;
+  }
+
+}
+
+@media (576px <= width <= 1023px) {
+  .hero {
+    margin: 32px 0;
+  }
+
+  .hero .title h1 {
+    font-size: 60px;
+    line-height: 72px;
+  }
+
+  .hero .title {
+    margin: 0 32px 24px;
+  }
+
+  .hero .image img {
+    border-top-right-radius: 72px;
+  }
+
+  .hero .image {
+    height: 464px;
+  }
+
+  .hero .hero-max-content {
+     gap: 24px;
+  }
+
+  .hero .hero-content {
+    margin-top: -120px;
+    padding: 24px 72px 0 32px;
+    border-top-right-radius: 72px;
+    margin-right: 32px;
+    min-height: 120px;
+  }
+
+  .hero .intro-text, .hero .intro-text p {
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  .hero .logo {
+    max-width: 128px;
+    max-height: 56px;
+  }
+}
+
+@media (width <= 575px)  {
+  .hero {
+    padding: 24px 0;
+  }
+
+  .hero .title h1 {
+    font-size: 56px;
+    line-height: 67px;
+  }
+
+  .hero .title {
+    margin: 0 16px 16px;
+  }
+
+  .hero .image img {
+    border-top-right-radius: 40px;
+  }
+
+  .hero .image {
+    height: 360px;
+  }
+
+  .hero .hero-max-content {
+    gap: 16px;
+  }
+
+  .hero .hero-content {
+    margin-top: -80px;
+    padding: 16px 40px 0 16px;
+    border-top-right-radius: 40px;
+    min-height: 80px;
+    margin-right: 16px;
+  }
+
+  .hero .intro-text, .hero .intro-text p {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .hero .logo {
+    max-width: 128px;
+    max-height: 56px;
+  }
+
+  .hero-max-content {
+    max-width: 664px;
+  }
+
+  .hide-image-mobile .image {
+    display: none;
+  }
+  
+  .hide-image-mobile .hero-content {
+    margin-top: 0;
   }
 }
