@@ -233,7 +233,8 @@
         "name": "customfield",
         "value": "",
         "label": "Custom Field",
-        "valueType": "string"
+        "valueType": "string",
+        "configUrl": "/content/dam.config.json"
       },
       {
         "component": "text",
