@@ -232,7 +232,7 @@
         "component": "custom-field",
         "name": "customfield",
         "value": "",
-        "label": "Custom Field",
+        "label": "Custom Field Icon Picker",
         "valueType": "string",
         "configUrl": "/content/dam.config.json"
       },
