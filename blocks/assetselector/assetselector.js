@@ -1,4 +1,7 @@
-import { createPicTagWithOpenApi } from '../../scripts/utils/dam-open-apis.js';
+import {
+  createPicTagWithOpenApi,
+  createPicAndImgWithOpenApi,
+} from '../../scripts/utils/dam-open-apis.js';
 
 export default async function decorate(block) {
   const anchor = block.querySelector('a');
@@ -13,6 +16,7 @@ export default async function decorate(block) {
       : 'eager';
   damUrl.loading = isLazy;
   const pictureEle = await createPicTagWithOpenApi(damUrl);
+  //const pictureEle = await createPicAndImgWithOpenApi(damUrl);
 
   // Remove <div> tags
   block.querySelectorAll(':scope > div').forEach((e) => e.remove());
