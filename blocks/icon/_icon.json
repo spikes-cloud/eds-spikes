@@ -28,7 +28,8 @@
           "value": "",
           "label": "Icon",
           "valueType": "string",
-          "configUrl": "/content/dam.config.json"
+          "description": "Select the icon from the icon picker",
+          "configUrl": "/blocks/icon/config.json"
         }
       ]
     }
