@@ -1,22 +1,22 @@
-.icon .icon-wrapper {
+.icon-wrapper .icon {
   max-width: unset;
   padding: 0;
 }
 
-.icon {
+.icon-wrapper {
   position: relative;
   padding: 40px 24px;
   min-height: 300px;
 }
 
-.icon img {
+.icon-wrapper img {
   object-fit: cover;
   width: 150px;
   height: 150px;
 }
 
 @media (width >= 900px) {
-  .icon {
+  .icon-wrapper {
     padding: 40px 32px;
   }
 }
