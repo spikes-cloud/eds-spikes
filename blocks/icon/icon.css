@@ -1,3 +1,8 @@
+.icon-wrapper .icon {
+  width: auto;
+  height: auto;
+}
+
 .icon-wrapper .icon img {
   width: 150px;
 }
