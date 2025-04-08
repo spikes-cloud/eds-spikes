@@ -228,7 +228,7 @@
         "label": "Icon",
         "valueType": "string",
         "description": "Select the icon from the icon picker",
-        "configUrl": "/blocks/icon/config.json"
+        "configUrl": "https://qrb-136--a244-aem-eds-tech-spikes--qantas-cloud.aem.live/assets/assets.json"
       }
     ]
   },
