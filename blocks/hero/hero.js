@@ -20,5 +20,5 @@ export default function decorate(block) {
   block.append(heroBlockBody);
 
   optimizeImages(block);
-  console.log(imgAlt, hideOnMobile, heading, logo);
+  console.log(imgAlt, hideOnMobile, heading, logo,'ankit');
 }
