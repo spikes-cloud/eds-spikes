@@ -56,10 +56,13 @@ export default async function decorate(block) {
   heroContent?.classList.add('hero-content');
   heroContentMax.classList.add('hero-max-content');
 
-  const isValidElement = (el) => el && (el.textContent.trim() !== '' || el.querySelector('img')?.getAttribute('src'));
+  const isValidElement = (el) =>
+    el && (el.textContent.trim() !== '' || el.querySelector('img')?.getAttribute('src'));
   const elementAppendHeroBody = [titleText, mainImage].filter(isValidElement);
   // const elementAppendHeroBody = [titleText, heroImageWrapper].filter(isValidElement);
-  const elementAppendHeroContent = [captionText, logoImage, introTextValue].filter(isValidElement);
+  const elementAppendHeroContent = [captionText, logoImage, introTextValue].filter(
+    isValidElement,
+  );
   // const elementAppendHeroContent = [captionText,
   // herologoWrapper, introTextValue].filter(isValidElement);
 
@@ -69,5 +72,5 @@ export default async function decorate(block) {
   heroBody.append(heroContent);
   block.textContent = '';
   block.append(heroBody);
-  console.log(heroBody,'hey there')
+  console.log(heroBody, 'hey there ankit');
 }
