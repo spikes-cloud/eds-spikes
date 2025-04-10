@@ -1,7 +1,4 @@
-import {
-  createPicTagWithOpenApi,
-  createPicAndImgWithOpenApi,
-} from '../../scripts/utils/dam-open-apis.js';
+import { createPicTagWithOpenApi } from '../../scripts/utils/dam-open-apis.js';
 
 export default async function decorate(block) {
   const anchor = block.querySelector('a');
