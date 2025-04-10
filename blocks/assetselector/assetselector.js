@@ -16,7 +16,7 @@ export default async function decorate(block) {
       : 'eager';
   damUrl.loading = isLazy;
   const pictureEle = await createPicTagWithOpenApi(damUrl);
-  //const pictureEle = await createPicAndImgWithOpenApi(damUrl);
+  // const pictureEle = await createPicAndImgWithOpenApi(damUrl);
 
   // Remove <div> tags
   block.querySelectorAll(':scope > div').forEach((e) => e.remove());
