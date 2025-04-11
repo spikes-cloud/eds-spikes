@@ -325,7 +325,8 @@
       {
         "component": "text",
         "name": "title",
-        "label": "Heading"
+        "label": "Heading",
+        "multi": true
       },
       {
         "component": "select",
@@ -377,6 +378,19 @@
             "value": "Fixed list"
           }
         ]
+      },
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Heading",
+        "condition": {
+          "===": [
+            {
+              "var": "buildListUsing"
+            },
+            "Fixed list"
+          ]
+        }
       }
     ]
   }
