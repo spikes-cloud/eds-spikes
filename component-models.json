@@ -385,7 +385,7 @@
       },
       {
         "component": "aem-content",
-        "name": "regionSelectorUrl",
+        "name": "parentPageUrl",
         "value": "",
         "label": "Parent Page",
         "condition": {
