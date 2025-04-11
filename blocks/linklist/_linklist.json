@@ -24,8 +24,8 @@
       "fields": [
         {
           "component": "tab",
-          "label": "Linklist",
-          "name": "linklist"
+          "label": "List Setting",
+          "name": "listSetting"
         },
         {
           "component": "text",
