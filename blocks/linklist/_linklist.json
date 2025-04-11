@@ -38,10 +38,6 @@
           "label": "Heading Level",
           "options": [
             {
-              "name": "h1",
-              "value": "h1"
-            },
-            {
               "name": "h2",
               "value": "h2"
             },
@@ -52,14 +48,6 @@
             {
               "name": "h4",
               "value": "h4"
-            },
-            {
-              "name": "h5",
-              "value": "h5"
-            },
-            {
-              "name": "h6",
-              "value": "h6"
             }
           ]
         },
@@ -100,6 +88,58 @@
           "name": "url",
           "label": "URL",
           "condition": { "===": [{ "var": "buildListUsingType" }, "fixedlist"] }
+        },
+        {
+          "component": "text",
+          "name": "ctaText",
+          "label": "CTA Text",
+          "condition": { "===": [{ "var": "buildListUsingType" }, "fixedlist"] }
+        },
+        {
+          "component": "text",
+          "name": "ctaText",
+          "label": "CTA Text",
+          "condition": { "===": [{ "var": "buildListUsingType" }, "fixedlist"] }
+        },
+        {
+          "component": "button",
+          "name": "add",
+          "label": "Add",
+          "condition": { "===": [{ "var": "buildListUsingType" }, "fixedlist"] }
+        },
+        {
+          "component": "select",
+          "name": "orderBy",
+          "label": "Order by",
+          "value": "title",
+          "options": [
+            {
+              "name": "Title",
+              "value": "title"
+            },
+            {
+              "name": "AEM Page Path",
+              "value": "aempagepath"
+            }
+          ],
+          "condition": { "===": [{ "var": "buildListUsingType" }, "childpages"] }
+        },
+        {
+          "component": "select",
+          "name": "sortOrder",
+          "label": "Sort Order",
+          "value": "descending",
+          "options": [
+            {
+              "name": "Ascending",
+              "value": "ascending"
+            },
+            {
+              "name": "Descending",
+              "value": "descending"
+            }
+          ],
+          "condition": { "===": [{ "var": "buildListUsingType" }, "childpages"] }
         }
       ]
     }
