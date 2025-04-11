@@ -79,22 +79,23 @@
           ]
         },
         {
-          "name": "Our Partners",
-          "model": "text-only",
-          "filter": "our-partners",
-          "text": "<p>Our community of partners is ...</p>",
-          "item_0": {
-            "model": "linked-icon",
-            "image": "/content/dam/partners/foo.png",
-            "imageAlt": "Icon of Foo",
-            "link": "https://foo.com/"
-          },
-          "item_1": {
-            "model": "linked-icon",
-            "image": "/content/dam/partners/bar.png",
-            "imageAlt": "Icon of Bar",
-            "link": "https://bar.com"
-          }
+          "component": "text",
+          "valueType": "string",
+          "name": "jcr:title",
+          "label": "Title"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "jcr:description",
+          "label": "Description"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "keywords",
+          "multi": true,
+          "label": "Keywords"
         }
       ]
     }
