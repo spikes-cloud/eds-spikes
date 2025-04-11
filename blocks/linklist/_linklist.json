@@ -75,6 +75,10 @@
           "value": "",
           "options": [
             {
+              "name": "default",
+              "value": ""
+            },
+            {
               "name": "Child pages",
               "value": "Child pages"
             },
@@ -85,18 +89,21 @@
           ]
         },
         {
-          "component": "text",
-          "name": "parentPage",
+          "component": "aem-content",
+          "name": "regionSelectorUrl",
+          "value": "",
           "label": "Parent Page",
           "condition": { "===": [{ "var": "buildListUsing" }, "Child pages"] },
-          "toolTip": "hey there"
+          "valueType": "string",
+          "validation": {
+            "rootPath": "/content/qcom"
+          }
         },
         {
           "component": "text",
           "name": "urlLinkList",
           "label": "URL",
-          "condition": { "===": [{ "var": "buildListUsing" }, "Fixed List"] },
-          "toolTip": ""
+          "condition": { "===": [{ "var": "buildListUsing" }, "Fixed List"] }
         }
       ]
     }

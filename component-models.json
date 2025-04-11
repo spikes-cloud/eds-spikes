@@ -370,6 +370,10 @@
         "value": "",
         "options": [
           {
+            "name": "default",
+            "value": ""
+          },
+          {
             "name": "Child pages",
             "value": "Child pages"
           },
@@ -380,8 +384,9 @@
         ]
       },
       {
-        "component": "text",
-        "name": "parentPage",
+        "component": "aem-content",
+        "name": "regionSelectorUrl",
+        "value": "",
         "label": "Parent Page",
         "condition": {
           "===": [
@@ -391,7 +396,10 @@
             "Child pages"
           ]
         },
-        "toolTip": "hey there"
+        "valueType": "string",
+        "validation": {
+          "rootPath": "/content/qcom"
+        }
       },
       {
         "component": "text",
@@ -404,8 +412,7 @@
             },
             "Fixed List"
           ]
-        },
-        "toolTip": ""
+        }
       }
     ]
   }
