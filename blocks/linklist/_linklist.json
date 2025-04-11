@@ -89,7 +89,7 @@
           "name": "parentPage",
           "label": "Parent Page",
           "condition": { "===": [{ "var": "buildListUsing" }, "Child pages"] },
-          "toolTip": ""
+          "toolTip": "hey there"
         },
         {
           "component": "text",
