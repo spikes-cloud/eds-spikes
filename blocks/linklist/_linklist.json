@@ -64,6 +64,11 @@
           ]
         },
         {
+          "component": "tab",
+          "label": "List Settings",
+          "name": "listSettings"
+        },
+        {
           "component": "select",
           "name": "buildListUsing",
           "label": "Build List Using",
