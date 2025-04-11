@@ -380,26 +380,8 @@
         ]
       },
       {
-        "component": "aem-content",
-        "name": "buildListUsingUrl",
-        "value": "",
-        "label": "Parent Page",
-        "condition": {
-          "===": [
-            {
-              "var": "buildListUsingType"
-            },
-            "Child pages"
-          ]
-        },
-        "valueType": "string",
-        "validation": {
-          "rootPath": "/content/qcom"
-        }
-      },
-      {
         "component": "text",
-        "name": "buildListUsingUrl",
+        "name": "buildListUsing",
         "label": "URL",
         "condition": {
           "===": [
