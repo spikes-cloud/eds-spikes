@@ -367,6 +367,14 @@
         "component": "select",
         "name": "buildListUsing",
         "label": "Build List Using",
+        "condition": {
+          "===": [
+            {
+              "var": "headingMain"
+            },
+            "Fixed list"
+          ]
+        },
         "options": [
           {
             "name": "Child pages",
@@ -380,16 +388,8 @@
       },
       {
         "component": "text",
-        "name": "title",
-        "label": "Heading",
-        "condition": {
-          "===": [
-            {
-              "var": "buildListUsing"
-            },
-            "Fixed list"
-          ]
-        }
+        "name": "headingMain",
+        "label": "Heading Main"
       }
     ]
   }
