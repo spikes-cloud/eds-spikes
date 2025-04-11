@@ -324,13 +324,13 @@
       },
       {
         "component": "text",
-        "name": "title",
-        "label": "Title"
+        "name": "heading",
+        "label": "Heading"
       },
       {
         "component": "select",
-        "name": "titleType",
-        "label": "Title Type",
+        "name": "headingLevel",
+        "label": "Heading Level",
         "options": [
           {
             "name": "h1",
