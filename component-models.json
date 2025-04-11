@@ -381,16 +381,31 @@
       },
       {
         "component": "text",
-        "name": "headingMain",
-        "label": "Heading Main",
+        "name": "parentPage",
+        "label": "Parent Page",
         "condition": {
           "===": [
             {
               "var": "buildListUsing"
             },
-            "Fixed list"
+            "Child pages"
           ]
-        }
+        },
+        "toolTip": ""
+      },
+      {
+        "component": "text",
+        "name": "urlLinkList",
+        "label": "URL",
+        "condition": {
+          "===": [
+            {
+              "var": "buildListUsing"
+            },
+            "Fixed List"
+          ]
+        },
+        "toolTip": ""
       }
     ]
   }
