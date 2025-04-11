@@ -365,14 +365,10 @@
       },
       {
         "component": "select",
-        "name": "buildListUsing",
+        "name": "buildListUsingType",
         "label": "Build List Using",
         "value": "",
         "options": [
-          {
-            "name": "default",
-            "value": ""
-          },
           {
             "name": "Child pages",
             "value": "Child pages"
@@ -385,7 +381,7 @@
       },
       {
         "component": "aem-content",
-        "name": "parentPageUrl",
+        "name": "buildListUsingUrl",
         "value": "",
         "label": "Parent Page",
         "condition": {
@@ -403,7 +399,7 @@
       },
       {
         "component": "text",
-        "name": "urlLinkList",
+        "name": "buildListUsingUrl",
         "label": "URL",
         "condition": {
           "===": [
