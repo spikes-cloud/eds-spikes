@@ -325,8 +325,7 @@
       {
         "component": "text",
         "name": "title",
-        "label": "Heading",
-        "multi": true
+        "label": "Heading"
       },
       {
         "component": "select",
