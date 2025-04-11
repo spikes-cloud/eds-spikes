@@ -371,24 +371,42 @@
         "options": [
           {
             "name": "Child pages",
-            "value": "Child pages"
+            "value": "childpages"
           },
           {
             "name": "Fixed list",
-            "value": "Fixed list"
+            "value": "fixedlist"
           }
         ]
       },
       {
+        "component": "aem-content",
+        "name": "parentPage",
+        "value": "",
+        "label": "Parent Page",
+        "valueType": "string",
+        "validation": {
+          "rootPath": "/content/qcom"
+        },
+        "condition": {
+          "===": [
+            {
+              "var": "buildListUsingType"
+            },
+            "childpages"
+          ]
+        }
+      },
+      {
         "component": "text",
-        "name": "buildListUsing",
+        "name": "url",
         "label": "URL",
         "condition": {
           "===": [
             {
               "var": "buildListUsingType"
             },
-            "Fixed List"
+            "fixedlist"
           ]
         }
       }
