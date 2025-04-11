@@ -102,9 +102,11 @@
           "condition": { "===": [{ "var": "buildListUsingType" }, "fixedlist"] }
         },
         {
-          "component": "button",
+          "component": "text",
           "name": "add",
           "label": "Add",
+          "url": "",
+          "type": "primary",
           "condition": { "===": [{ "var": "buildListUsingType" }, "fixedlist"] }
         },
         {
