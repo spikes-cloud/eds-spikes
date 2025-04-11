@@ -62,6 +62,21 @@
               "value": "h6"
             }
           ]
+        },
+        {
+          "component": "select",
+          "name": "buildListUsing",
+          "label": "Build List Using",
+          "options": [
+            {
+              "name": "Child pages",
+              "value": "Child pages"
+            },
+            {
+              "name": "Fixed list",
+              "value": "Fixed list"
+            }
+          ]
         }
       ]
     }
