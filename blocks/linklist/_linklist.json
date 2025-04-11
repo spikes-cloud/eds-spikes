@@ -62,6 +62,39 @@
               "value": "h6"
             }
           ]
+        },
+        {
+          "component": "select",
+          "name": "buildListUsing",
+          "label": "Build List Using",
+          "options": [
+            {
+              "name": "Child pages",
+              "value": "Child pages"
+            },
+            {
+              "name": "Fixed list",
+              "value": "Fixed list"
+            }
+          ]
+        },
+        {
+          "name": "Our Partners",
+          "model": "text-only",
+          "filter": "our-partners",
+          "text": "<p>Our community of partners is ...</p>",
+          "item_0": {
+            "model": "linked-icon",
+            "image": "/content/dam/partners/foo.png",
+            "imageAlt": "Icon of Foo",
+            "link": "https://foo.com/"
+          },
+          "item_1": {
+            "model": "linked-icon",
+            "image": "/content/dam/partners/bar.png",
+            "imageAlt": "Icon of Bar",
+            "link": "https://bar.com"
+          }
         }
       ]
     }
