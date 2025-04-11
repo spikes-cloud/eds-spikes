@@ -365,16 +365,9 @@
       },
       {
         "component": "select",
-        "name": "linkType",
+        "name": "buildListUsing",
         "label": "Build List Using",
-        "condition": {
-          "===": [
-            {
-              "var": "headingMain"
-            },
-            "Fixed list"
-          ]
-        },
+        "value": "",
         "options": [
           {
             "name": "Child pages",
@@ -389,7 +382,15 @@
       {
         "component": "text",
         "name": "headingMain",
-        "label": "Heading Main"
+        "label": "Heading Main",
+        "condition": {
+          "===": [
+            {
+              "var": "buildListUsing"
+            },
+            "Fixed list"
+          ]
+        }
       }
     ]
   }
