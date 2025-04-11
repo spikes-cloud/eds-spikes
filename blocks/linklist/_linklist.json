@@ -24,104 +24,29 @@
       "fields": [
         {
           "component": "tab",
-          "label": "Asset",
-          "name": "asset"
+          "label": "Linklist",
+          "name": "linklist"
         },
         {
           "component": "reference",
           "valueType": "string",
-          "name": "imagePicker",
-          "label": "Select an Asset",
+          "name": "image",
+          "label": "Image",
           "multi": false
         },
         {
-          "component": "text",
+          "component": "text-input",
           "valueType": "string",
-          "name": "imagePickerAlt",
-          "label": "Alternative text for image",
-          "condition": { "===": [{ "var": "imagePickerAltHide" }, false] },
-          "description": "Write descriptive, concise, relevant alt text to describe the image in context, enhancing accessibility forvisually impaired users and improving SEO.",
+          "name": "imageAlt",
+          "label": "Alt",
           "value": ""
         },
         {
-          "component": "boolean",
-          "label": "Don't provide alternative text",
-          "name": "imagePickerAltHide",
-          "valueType": "boolean",
-          "description": "Leave alt text empty for images that add no meaning or value. Marking them as decorative ensures assistive technologies ignore them."
-        },
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "imageCaption",
-          "label": "Image Location/Caption",
-          "description": "If required for image location, credits and image disclaimer.",
-          "value": ""
-        },
-        {
-          "component": "checkbox-group",
-          "label": "",
-          "name": "classes",
-          "valueType": "string",
-          "options": [
-            { "name": "Hide image in mobile view", "value": "hide-image-mobile" }
-          ]
-        },
-        {
-          "component": "tab",
+          "component": "text-area",
+          "name": "text",
+          "value": "",
           "label": "Text",
-          "name": "text"
-        },
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "heading",
-          "label": "Title",
-          "value": ""
-        },
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "headingType",
-          "label": "Type",
-          "value": "h1",
-          "hidden": true
-        },
-
-        {
-          "component": "richtext",
-          "valueType": "string",
-          "name": "introText",
-          "label": "Intro Text",
-          "description": "Maximum 3 lines of intro copy (desktop).",
-          "value": ""
-        },
-        {
-          "component": "tab",
-          "label": "Logo",
-          "name": "logo"
-        },
-        {
-          "component": "reference",
-          "valueType": "string",
-          "name": "logoPicker",
-          "label": "Logo Picker",
-          "multi": false
-        },
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "logoPickerAlt",
-          "description": "Write descriptive, concise, relevant alt text to describe the image in context, enhancing accessibility for visually impaired users and improving SEO.",
-          "label": "Alternative text for logo",
-          "condition": { "===": [{ "var": "logoAltHide" }, false] },
-          "value": ""
-        },
-        {
-          "component": "boolean",
-          "label": "Don't provide alternative text",
-          "name": "logoAltHide",
-          "valueType": "boolean"
+          "valueType": "string"
         }
       ]
     }
