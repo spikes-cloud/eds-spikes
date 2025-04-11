@@ -89,7 +89,7 @@
           "name": "buildListUsingUrl",
           "value": "",
           "label": "Parent Page",
-          "condition": { "===": [{ "var": "buildListUsing" }, "Child pages"] },
+          "condition": { "===": [{ "var": "buildListUsingType" }, "Child pages"] },
           "valueType": "string",
           "validation": {
             "rootPath": "/content/qcom"
@@ -99,7 +99,7 @@
           "component": "text",
           "name": "buildListUsingUrl",
           "label": "URL",
-          "condition": { "===": [{ "var": "buildListUsing" }, "Fixed List"] }
+          "condition": { "===": [{ "var": "buildListUsingType" }, "Fixed List"] }
         }
       ]
     }

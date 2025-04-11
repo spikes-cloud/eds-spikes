@@ -387,7 +387,7 @@
         "condition": {
           "===": [
             {
-              "var": "buildListUsing"
+              "var": "buildListUsingType"
             },
             "Child pages"
           ]
@@ -404,7 +404,7 @@
         "condition": {
           "===": [
             {
-              "var": "buildListUsing"
+              "var": "buildListUsingType"
             },
             "Fixed List"
           ]
