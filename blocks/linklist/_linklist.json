@@ -81,7 +81,8 @@
           "validation": {
             "rootPath": "/content/qcom"
           },
-          "condition": { "===": [{ "var": "buildListUsingType" }, "childpages"] }
+          "condition": { "===": [{ "var": "buildListUsingType" }, "childpages"] },
+          "multi": true
         },
         {
           "component": "text",
