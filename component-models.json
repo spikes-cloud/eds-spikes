@@ -365,7 +365,7 @@
       },
       {
         "component": "select",
-        "name": "buildListUsing",
+        "name": "linkType",
         "label": "Build List Using",
         "condition": {
           "===": [

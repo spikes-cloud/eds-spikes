@@ -70,7 +70,7 @@
         },
         {
           "component": "select",
-          "name": "buildListUsing",
+          "name": "linkType",
           "label": "Build List Using",
           "condition": { "===": [{ "var": "headingMain" }, "Fixed list"] },
           "options": [
