@@ -383,8 +383,7 @@
             },
             "childpages"
           ]
-        },
-        "multi": true
+        }
       },
       {
         "component": "text",
