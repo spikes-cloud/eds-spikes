@@ -154,9 +154,15 @@
         {
           "component": "boolean",
           "label": "Exclude Pages",
-          "name": "imagePickerAltHide",
+          "name": "excludePages",
           "valueType": "boolean",
           "condition": { "===": [{ "var": "buildListUsingType" }, "childpages"] }
+        },
+        {
+          "component": "text",
+          "name": "excludeUrl",
+          "label": "URL",
+          "condition": { "===": [{ "var": "excludePages" }, true] }
         }
       ]
     }
