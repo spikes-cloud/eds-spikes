@@ -159,9 +159,14 @@
           "condition": { "===": [{ "var": "buildListUsingType" }, "childpages"] }
         },
         {
-          "component": "text",
+          "component": "aem-content",
           "name": "excludeUrl",
+          "value": "",
           "label": "URL",
+          "valueType": "string",
+          "validation": {
+            "rootPath": "/content/qcom"
+          },
           "condition": { "===": [{ "var": "excludePages" }, true] },
           "multi": true
         }

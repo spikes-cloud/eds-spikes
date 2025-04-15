@@ -517,9 +517,14 @@
         }
       },
       {
-        "component": "text",
+        "component": "aem-content",
         "name": "excludeUrl",
+        "value": "",
         "label": "URL",
+        "valueType": "string",
+        "validation": {
+          "rootPath": "/content/qcom"
+        },
         "condition": {
           "===": [
             {
