@@ -162,7 +162,8 @@
           "component": "text",
           "name": "excludeUrl",
           "label": "URL",
-          "condition": { "===": [{ "var": "excludePages" }, true] }
+          "condition": { "===": [{ "var": "excludePages" }, true] },
+          "multi": true
         }
       ]
     }
