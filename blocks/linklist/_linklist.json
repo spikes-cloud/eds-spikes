@@ -142,6 +142,21 @@
             }
           ],
           "condition": { "===": [{ "var": "buildListUsingType" }, "childpages"] }
+        },
+        {
+          "component": "text",
+          "name": "add",
+          "label": "Exclude Pages",
+          "url": "",
+          "type": "primary",
+          "condition": { "===": [{ "var": "buildListUsingType" }, "childpages"] }
+        },
+        {
+          "component": "boolean",
+          "label": "Exclude Pages",
+          "name": "imagePickerAltHide",
+          "valueType": "boolean",
+          "condition": { "===": [{ "var": "buildListUsingType" }, "childpages"] }
         }
       ]
     }
