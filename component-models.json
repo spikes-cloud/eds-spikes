@@ -528,9 +528,9 @@
         "condition": {
           "===": [
             {
-              "var": "excludePages"
+              "var": "buildListUsingType"
             },
-            true
+            "childpages"
           ]
         },
         "multi": true
