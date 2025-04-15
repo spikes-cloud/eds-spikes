@@ -1,16 +1,8 @@
 // import promoteChild from '../../scripts/utils/dom.js';
 
 export default async function decorate(block) {
-  // const [
-  //   heroImage,
-  //   checkImgAlt,
-  //   imgCaption,
-  //   heroTitle,
-  //   introText,
-  //   logoImg,
-  //   checklogoAlt,
-  // ] = [...block.children];
-  console.log(block, 'linklist decorate function');
+  const [headingTitle] = [...block.children];
+  console.log(block, 'linklist decorate function', headingTitle);
   // generating damURL from anchor tag
   // const heroBody = document.createElement('div');
   // const heroContentMax = document.createElement('div');
