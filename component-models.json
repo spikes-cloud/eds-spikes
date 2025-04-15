@@ -526,11 +526,23 @@
           "rootPath": "/content/qcom"
         },
         "condition": {
-          "===": [
+          "and": [
             {
-              "var": "buildListUsingType"
+              "===": [
+                {
+                  "var": "excludePages"
+                },
+                true
+              ]
             },
-            "childpages"
+            {
+              "===": [
+                {
+                  "var": "buildListUsingType"
+                },
+                "childpages"
+              ]
+            }
           ]
         },
         "multi": true

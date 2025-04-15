@@ -168,8 +168,10 @@
             "rootPath": "/content/qcom"
           },
           "condition": {
-            "===": [{ "var": "excludePages" }, true],
-            "===": [{ "var": "buildListUsingType" }, "childpages"]
+            "and": [
+              { "===": [{ "var": "excludePages" }, true] },
+              { "===": [{ "var": "buildListUsingType" }, "childpages"] }
+            ]
           },
           "multi": true
         }
