@@ -167,12 +167,7 @@
           "validation": {
             "rootPath": "/content/qcom"
           },
-          "condition": {
-            "and": [
-              { "===": [{ "var": "excludePages" }, true] },
-              { "===": [{ "var": "buildListUsingType" }, "childpages"] }
-            ]
-          },
+          "condition": { "===": [{ "var": "buildListUsingType" }, "childpages"] },
           "multi": true
         }
       ]
