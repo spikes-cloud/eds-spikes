@@ -1,9 +1,11 @@
 import promoteChild from '../../scripts/utils/dom.js';
 
 export default async function decorate(block) {
-  const [headingTitle] = [...block.children];
+  const [headingTitle, fixedListUrl, ctaText] = [...block.children];
 
   const mainTitle = headingTitle ? promoteChild(headingTitle) : null;
+  const fixedUrl = headingTitle ? promoteChild(fixedListUrl) : null;
+  console.log(fixedUrl, ctaText, 'fixedUrlfixedUrl');
 
   // generating damURL from anchor tag
   const linklistBody = document.createElement('div');
@@ -14,6 +16,14 @@ export default async function decorate(block) {
   const linklistAnchor = document.createElement('a');
   const linklistP = document.createElement('p');
 
+  // linklistAnchor.href = fixedUrl;
+  // linklistAnchor.innerHTML = 'Click here';
+  // // OR, safer if you're not inserting HTML
+  // linklistAnchor.textContent = 'Click here';
+  // linklistAnchor.target = '_blank'; // opens in new tab
+  // linklistAnchor.rel = 'noopener noreferrer'; // security best practice with _blank
+  // linklistAnchor.className = 'my-custom-class';
+
   // Add CSS classes only if the elements exist
   linklistBody?.classList.add('linklist-body');
   linklistItemOne?.classList.add('linklist-item-one');
@@ -21,7 +31,7 @@ export default async function decorate(block) {
   linklistUl?.classList.add('linklist-ul');
   linklistli?.classList.add('linklist-li');
 
-  console.log(block, 'linklist decorate function', mainTitle);
+  // console.log(block, 'linklist decorate function', mainTitle);
   linklistItemOne.append(mainTitle);
   linklistli.append(linklistAnchor, linklistP);
   linklistUl.append(linklistli);

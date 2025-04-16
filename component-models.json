@@ -387,21 +387,8 @@
       },
       {
         "component": "text",
-        "name": "url",
+        "name": "fixedListUrl",
         "label": "URL",
-        "condition": {
-          "===": [
-            {
-              "var": "buildListUsingType"
-            },
-            "fixedlist"
-          ]
-        }
-      },
-      {
-        "component": "text",
-        "name": "ctaText",
-        "label": "CTA Text",
         "condition": {
           "===": [
             {
