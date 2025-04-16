@@ -386,47 +386,6 @@
         }
       },
       {
-        "component": "text",
-        "name": "fixedListUrl",
-        "label": "URL",
-        "condition": {
-          "===": [
-            {
-              "var": "buildListUsingType"
-            },
-            "fixedlist"
-          ]
-        }
-      },
-      {
-        "component": "text",
-        "name": "ctaText",
-        "label": "CTA Text",
-        "condition": {
-          "===": [
-            {
-              "var": "buildListUsingType"
-            },
-            "fixedlist"
-          ]
-        }
-      },
-      {
-        "component": "text",
-        "name": "add",
-        "label": "Add",
-        "url": "",
-        "type": "primary",
-        "condition": {
-          "===": [
-            {
-              "var": "buildListUsingType"
-            },
-            "fixedlist"
-          ]
-        }
-      },
-      {
         "component": "select",
         "name": "orderBy",
         "label": "Order by",
@@ -521,6 +480,21 @@
           ]
         },
         "multi": true
+      }
+    ]
+  },
+  {
+    "id": "listitem",
+    "fields": [
+      {
+        "component": "text",
+        "name": "fixedListUrl",
+        "label": "URL"
+      },
+      {
+        "component": "text",
+        "name": "ctaText",
+        "label": "CTA Text"
       }
     ]
   }
