@@ -2,7 +2,7 @@ import promoteChild from '../../scripts/utils/dom.js';
 
 export default async function decorate(block) {
   const [headingTitle, fixedListUrl, ctaText] = [...block.children];
-  const mainTitle = headingTitle ? promoteChild(headingTitle) : null;
+  // const mainTitle = headingTitle ? promoteChild(headingTitle) : null;
   const fixedUrl = headingTitle ? promoteChild(fixedListUrl) : null;
   console.log(fixedUrl, ctaText, 'fixedUrlfixedUrl');
 
@@ -12,8 +12,8 @@ export default async function decorate(block) {
   const linklistItemTwo = document.createElement('div');
   const linklistUl = document.createElement('ul');
   const linklistli = document.createElement('li');
-  const linklistAnchor = document.createElement('a');
-  const linklistP = document.createElement('p');
+  // const linklistAnchor = document.createElement('a');
+  // const linklistP = document.createElement('p');
 
   // linklistAnchor.href = fixedUrl;
   // linklistAnchor.innerHTML = 'Click here';
@@ -31,12 +31,12 @@ export default async function decorate(block) {
   linklistli?.classList.add('linklist-li');
 
   console.log(block, 'linklist decorate function');
-  linklistItemOne.append(mainTitle);
-  linklistli.append(linklistAnchor, linklistP);
-  linklistUl.append(linklistli);
-  linklistItemTwo.append(linklistUl);
-  linklistBody.append(linklistItemOne, linklistItemTwo);
+  // linklistItemOne.append(mainTitle);
+  // linklistli.append(linklistAnchor, linklistP);
+  // linklistUl.append(linklistli);
+  // linklistItemTwo.append(linklistUl);
+  // linklistBody.append(linklistItemOne, linklistItemTwo);
 
-  block.textContent = '';
-  block.append(linklistBody);
+  // block.textContent = '';
+  // block.append(linklistBody);
 }
