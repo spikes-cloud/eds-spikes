@@ -1,14 +1,16 @@
-/* CSS styles */
 .linklist-body {
   display: flex;
   justify-content: space-between;
 }
+
 .linklist-item-one {
   width: 50%;
 }
+
 .linklist-item-two {
   width: 50%;
 }
+
 .linklist-ul li {
   display: flex;
   margin: 0;

@@ -2,11 +2,9 @@ import promoteChild from '../../scripts/utils/dom.js';
 
 export default async function decorate(block) {
   const [headingTitle, fixedListUrl, ctaText] = [...block.children];
-
   const mainTitle = headingTitle ? promoteChild(headingTitle) : null;
   const fixedUrl = headingTitle ? promoteChild(fixedListUrl) : null;
   console.log(fixedUrl, ctaText, 'fixedUrlfixedUrl');
-
   // generating damURL from anchor tag
   const linklistBody = document.createElement('div');
   const linklistItemOne = document.createElement('div');
