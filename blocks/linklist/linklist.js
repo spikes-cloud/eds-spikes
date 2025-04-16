@@ -2,9 +2,10 @@ import promoteChild from '../../scripts/utils/dom.js';
 
 export default async function decorate(block) {
   const [headingTitle, fixedListUrl, ctaText] = [...block.children];
-  // const mainTitle = headingTitle ? promoteChild(headingTitle) : null;
-  const fixedUrl = headingTitle ? promoteChild(fixedListUrl) : null;
-  console.log(fixedUrl, ctaText, 'fixedUrlfixedUrl', fixedListUrl, ctaText);
+  const mainTitle = headingTitle ? promoteChild(headingTitle) : null;
+  const fixedUrl = fixedListUrl ? promoteChild(fixedListUrl) : null;
+  const linkTitle = fixedListUrl ? promoteChild(ctaText) : null;
+  console.log(fixedUrl, linkTitle, 'fixedUrlfixedUrl', fixedListUrl, ctaText);
 
   // generating damURL from anchor tag
   const linklistBody = document.createElement('div');
@@ -31,7 +32,7 @@ export default async function decorate(block) {
   linklistli?.classList.add('linklist-li');
 
   console.log(block, 'linklist decorate function');
-  // linklistItemOne.append(mainTitle);
+  linklistItemOne.append(mainTitle);
   // linklistli.append(linklistAnchor, linklistP);
   // linklistUl.append(linklistli);
   // linklistItemTwo.append(linklistUl);
