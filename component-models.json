@@ -315,186 +315,40 @@
     ]
   },
   {
-    "id": "linklist",
+    "id": "card",
     "fields": [
       {
-        "component": "tab",
-        "label": "List Setting",
-        "name": "listSetting"
-      },
-      {
-        "component": "text",
-        "name": "headingTitle",
-        "label": "Heading"
-      },
-      {
-        "component": "select",
-        "name": "headingTitleType",
-        "label": "Heading Level",
-        "options": [
-          {
-            "name": "h2",
-            "value": "h2"
-          },
-          {
-            "name": "h3",
-            "value": "h3"
-          },
-          {
-            "name": "h4",
-            "value": "h4"
-          }
-        ]
-      },
-      {
-        "component": "tab",
-        "label": "List Settings",
-        "name": "listSettings"
-      },
-      {
-        "component": "select",
-        "name": "buildListUsingType",
-        "label": "Build List Using",
-        "value": "",
-        "options": [
-          {
-            "name": "Child pages",
-            "value": "childpages"
-          },
-          {
-            "name": "Fixed list",
-            "value": "fixedlist"
-          }
-        ]
-      },
-      {
-        "component": "aem-content",
-        "name": "parentPage",
-        "value": "",
-        "label": "Parent Page",
+        "component": "reference",
         "valueType": "string",
-        "validation": {
-          "rootPath": "/content/qcom"
-        },
-        "condition": {
-          "===": [
-            {
-              "var": "buildListUsingType"
-            },
-            "childpages"
-          ]
-        }
+        "name": "image",
+        "label": "Image",
+        "multi": false
       },
       {
-        "component": "select",
-        "name": "orderBy",
-        "label": "Order by",
-        "value": "title",
-        "options": [
-          {
-            "name": "Title",
-            "value": "title"
-          },
-          {
-            "name": "AEM Page Path",
-            "value": "aempagepath"
-          }
-        ],
-        "condition": {
-          "===": [
-            {
-              "var": "buildListUsingType"
-            },
-            "childpages"
-          ]
-        }
-      },
-      {
-        "component": "select",
-        "name": "sortOrder",
-        "label": "Sort Order",
-        "value": "descending",
-        "options": [
-          {
-            "name": "Ascending",
-            "value": "ascending"
-          },
-          {
-            "name": "Descending",
-            "value": "descending"
-          }
-        ],
-        "condition": {
-          "===": [
-            {
-              "var": "buildListUsingType"
-            },
-            "childpages"
-          ]
-        }
-      },
-      {
-        "component": "text",
-        "name": "add",
-        "label": "Exclude Pages",
-        "url": "",
-        "type": "primary",
-        "condition": {
-          "===": [
-            {
-              "var": "buildListUsingType"
-            },
-            "childpages"
-          ]
-        }
-      },
-      {
-        "component": "boolean",
-        "label": "Exclude Pages",
-        "name": "excludePages",
-        "valueType": "boolean",
-        "condition": {
-          "===": [
-            {
-              "var": "buildListUsingType"
-            },
-            "childpages"
-          ]
-        }
-      },
-      {
-        "component": "aem-content",
-        "name": "excludeUrl",
+        "component": "richtext",
+        "name": "text",
         "value": "",
-        "label": "URL",
-        "valueType": "string",
-        "validation": {
-          "rootPath": "/content/qcom"
-        },
-        "condition": {
-          "===": [
-            {
-              "var": "buildListUsingType"
-            },
-            "childpages"
-          ]
-        },
-        "multi": true
+        "label": "Text",
+        "valueType": "string"
       }
     ]
   },
   {
-    "id": "listitem",
+    "id": "cards",
     "fields": [
       {
-        "component": "text",
-        "name": "fixedListUrl",
-        "label": "URL"
+        "component": "reference",
+        "valueType": "string",
+        "name": "imageone",
+        "label": "Image",
+        "multi": false
       },
       {
-        "component": "text",
-        "name": "ctaText",
-        "label": "CTA Text"
+        "component": "richtext",
+        "name": "textone",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
       }
     ]
   }

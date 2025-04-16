@@ -42,9 +42,9 @@
     ]
   },
   {
-    "id": "linklist",
+    "id": "cards",
     "components": [
-      "listitem"
+      "card"
     ]
   }
 ]
