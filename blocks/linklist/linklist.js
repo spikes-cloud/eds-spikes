@@ -5,6 +5,7 @@ export default async function decorate(block) {
   const mainTitle = headingTitle ? promoteChild(headingTitle) : null;
   const fixedUrl = headingTitle ? promoteChild(fixedListUrl) : null;
   console.log(fixedUrl, ctaText, 'fixedUrlfixedUrl');
+
   // generating damURL from anchor tag
   const linklistBody = document.createElement('div');
   const linklistItemOne = document.createElement('div');
@@ -29,7 +30,7 @@ export default async function decorate(block) {
   linklistUl?.classList.add('linklist-ul');
   linklistli?.classList.add('linklist-li');
 
-  // console.log(block, 'linklist decorate function', mainTitle);
+  console.log(block, 'linklist decorate function');
   linklistItemOne.append(mainTitle);
   linklistli.append(linklistAnchor, linklistP);
   linklistUl.append(linklistli);
