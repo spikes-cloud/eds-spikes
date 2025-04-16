@@ -1,30 +1,32 @@
 {
   "definitions": [
     {
-      "title": "Cards",
-      "id": "cards",
+      "title": "Linklist",
+      "id": "linklist",
       "plugins": {
         "xwalk": {
           "page": {
             "resourceType": "core/franklin/components/block/v1/block",
             "template": {
-              "name": "Cards",
-              "filter": "cards"
+              "name": "Linklist",
+              "model": "linklist",
+              "heading": "",
+              "headingType": "h1"
             }
           }
         }
       }
     },
     {
-      "title": "Card",
-      "id": "card",
+      "title": "ListItem",
+      "id": "listitem",
       "plugins": {
         "xwalk": {
           "page": {
             "resourceType": "core/franklin/components/block/v1/block/item",
             "template": {
-              "name": "Card",
-              "model": "card"
+              "name": "ListItem",
+              "model": "listitem"
             }
           }
         }
@@ -33,29 +35,152 @@
   ],
   "models": [
     {
-      "id": "card",
+      "id": "linklist",
       "fields": [
         {
-          "component": "reference",
-          "valueType": "string",
-          "name": "image",
-          "label": "Image",
-          "multi": false
+          "component": "tab",
+          "label": "List Setting",
+          "name": "listSetting"
         },
         {
-          "component": "richtext",
-          "name": "text",
+          "component": "text",
+          "name": "headingTitle",
+          "label": "Heading"
+        },
+        {
+          "component": "select",
+          "name": "headingTitleType",
+          "label": "Heading Level",
+          "options": [
+            {
+              "name": "h2",
+              "value": "h2"
+            },
+            {
+              "name": "h3",
+              "value": "h3"
+            },
+            {
+              "name": "h4",
+              "value": "h4"
+            }
+          ]
+        },
+        {
+          "component": "tab",
+          "label": "List Settings",
+          "name": "listSettings"
+        },
+        {
+          "component": "select",
+          "name": "buildListUsingType",
+          "label": "Build List Using",
           "value": "",
-          "label": "Text",
-          "valueType": "string"
+          "options": [
+            {
+              "name": "Child pages",
+              "value": "childpages"
+            },
+            {
+              "name": "Fixed list",
+              "value": "fixedlist"
+            }
+          ]
+        },
+        {
+          "component": "aem-content",
+          "name": "parentPage",
+          "value": "",
+          "label": "Parent Page",
+          "valueType": "string",
+          "validation": {
+            "rootPath": "/content/qcom"
+          },
+          "condition": { "===": [{ "var": "buildListUsingType" }, "childpages"] }
+        },
+        {
+          "component": "select",
+          "name": "orderBy",
+          "label": "Order by",
+          "value": "title",
+          "options": [
+            {
+              "name": "Title",
+              "value": "title"
+            },
+            {
+              "name": "AEM Page Path",
+              "value": "aempagepath"
+            }
+          ],
+          "condition": { "===": [{ "var": "buildListUsingType" }, "childpages"] }
+        },
+        {
+          "component": "select",
+          "name": "sortOrder",
+          "label": "Sort Order",
+          "value": "descending",
+          "options": [
+            {
+              "name": "Ascending",
+              "value": "ascending"
+            },
+            {
+              "name": "Descending",
+              "value": "descending"
+            }
+          ],
+          "condition": { "===": [{ "var": "buildListUsingType" }, "childpages"] }
+        },
+        {
+          "component": "text",
+          "name": "add",
+          "label": "Exclude Pages",
+          "url": "",
+          "type": "primary",
+          "condition": { "===": [{ "var": "buildListUsingType" }, "childpages"] }
+        },
+        {
+          "component": "boolean",
+          "label": "Exclude Pages",
+          "name": "excludePages",
+          "valueType": "boolean",
+          "condition": { "===": [{ "var": "buildListUsingType" }, "childpages"] }
+        },
+        {
+          "component": "aem-content",
+          "name": "excludeUrl",
+          "value": "",
+          "label": "URL",
+          "valueType": "string",
+          "validation": {
+            "rootPath": "/content/qcom"
+          },
+          "condition": { "===": [{ "var": "buildListUsingType" }, "childpages"] },
+          "multi": true
+        }
+      ]
+    },
+    {
+      "id": "listitem",
+      "fields": [
+        {
+          "component": "text",
+          "name": "fixedListUrl",
+          "label": "URL"
+        },
+        {
+          "component": "text",
+          "name": "ctaText",
+          "label": "CTA Text"
         }
       ]
     }
   ],
   "filters": [
     {
-      "id": "cards",
-      "components": ["card"]
+      "id": "linklist",
+      "components": ["listitem"]
     }
   ]
 }
